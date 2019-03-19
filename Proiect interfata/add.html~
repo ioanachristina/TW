@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<title>CityZen</title>
+
+
+<link rel="stylesheet" type="text/css" href="baranav+body.css">
+<link rel="stylesheet" type="text/css" href="header.css">
+<link rel="stylesheet" type="text/css" href="add.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+<h1 id="header" onclick="window.location.href='index.html'"></h1>
+<div class="navbar">
+  <a href="index.html">Pagina principală</a>
+  <div class="dropdown">
+    <button class="dropbtn">Evenimente
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="deznat.html">Dezastre naturale</a>
+      <a href="#">Blocaje</a>
+      <a href="#">Accidente</a>
+      <a href="#">Acte de vandalism</a>
+    </div>
+  </div> 
+  <a href="add.html">Adaugă eveniment</a>
+  <a href="profile.html">Profil</a>
+  <div class="right">
+  	<a href="login.html">Login</a>
+
+  	</div>
+  	
+  	<div class="container">
+  <form >
+   <div class="row">
+      <div class="col-25">
+        <label for="country">Tipul evenimentului</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option value="dezastre_naturale">Dezastre naturale</option>
+          <option value="blocaje">Blocaje</option>
+          <option value="accidente">Accidente</option>
+          <option value="acte_de_vandalism">Acte de vandalism</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Localitatea în care are loc</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="loc" name="localitate" placeholder="Localitatea...">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Detalii suplimentare</label>
+      </div>
+      <div class="col-75">
+        <textarea id="detalii" name="detalii" placeholder="Detalii..." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>
+
