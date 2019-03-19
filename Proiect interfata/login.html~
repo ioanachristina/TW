@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+</html>
+<head>
+<title>CityZen</title>
+
+<link rel="stylesheet" type="text/css" href="baranav+body.css">
+<link rel="stylesheet" type="text/css" href="header.css">
+
+<link rel="stylesheet" type="text/css" href="login.css">
+
+</head>
+<body>
+<h1 id="header" onclick="window.location.href='index.html'"></h1>
+<div class="navbar">
+  <a href="index.html">Pagina principală</a>
+  <div class="dropdown">
+    <button class="dropbtn">Evenimente
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="deznat.html">Dezastre naturale</a>
+      <a href="#">Blocaje</a>
+      <a href="#">Accidente</a>
+      <a href="#">Acte de vandalism</a>
+    </div>
+  </div> 
+  <a href="add.html">Adaugă eveniment</a> 
+  <a href="profile.html">Profil</a>
+  
+  <div class="right">
+  	<a href="login.html">Login</a>
+
+  	</div>
+</div>
+<form align="center">
+<div><h3>Login</h3></div>
+<label for="uname"><b>Username</b></label>
+<input type="text" placeHolder="Introduceți numele de utilizator" name="uname" required><br>
+
+<label for="pw"><b> Parola</b></label>
+
+<input type="password" placeholder="Introduceți parola" name="pw" required><br>
+<button type="submit" class="button1">Login</button></br>
+<label>
+<input type = "checkbox" checked="checked" name="remember">Ține minte
+</label>
+<div class="container register">
+    <p>Nu aveți cont? <a href="register.html">Creațivă un cont.</a>.</p><br>
+  </div>
+
+</form>
+</div>
+
+
+
+
+</body>
+
