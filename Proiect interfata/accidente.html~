@@ -8,7 +8,7 @@
 
 <link rel="stylesheet" type="text/css" href="baranav+body.css">
 <link rel="stylesheet" type="text/css" href="header.css">
-<link rel="stylesheet" type="text/css" href="profile.css">
+<link rel="stylesheet" type="text/css" href="deznat.css">
 
 
 
@@ -46,53 +46,30 @@
   <a href="profile.html">Profil</a>
   <div class="right">
   	<a href="login.html">Login</a>
+
   	</div>
+
 </div>
 
 
-<div class="ProfilePage">
 
-	<div Class="LeftCol">
-		<div id="Photo"><img src = "avatar.jpg"></div>
 
-			
+
+
+
+
+
+
+<div class="anunturi">
+		<div class="data"> Joi , 21 martie 2019 , ora 00:42
+
+	<div class="titluanunt">
+		<b>Accident rutier zona Podul de Piatra, Iasi cu 2 victime ajunse in spital.</b>
 	</div>
-	<div class="RightCol">
-		<div class= "Info">
-
-			<div id="username"> 
-				Username :
-
-				<span> craiasa_zapezii</span>
-
-			</div>
-			<div id="nume">
-				Nume:
-				<span> Zăpezii </span>
-			</div>
-			<div id="prenume">
-				Prenume :
-				<span>Crăiasa</span>
-			</div>
-			<div id="email">
-				Email :
-				<span>craiasa.zapezii@gmail.com</span>
-			</div>
-			<div id="localitate">
-				Localitate:
-				<span>Iași</span>
-			</div>
-
-			<div id="descriere">
-				Descriere :
-				<span>Nu vreau să spun.</span>
-			</div>
-			<div >
-				<button class="button"> Edit
-			</div>
+	<div class="corpanunt">
+		
 	</div>
-		</div>
-	</div>
+</div>
 
 
 

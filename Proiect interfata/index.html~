@@ -11,28 +11,13 @@
 <link rel="stylesheet" type="text/css" href="index.css">
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </head>
 <body>
 <h1 id="header" onclick="window.location.href='index.html'"></h1>
 <div class="navbar">
   <a href="index.html">Pagina principală</a>
   <div class="dropdown">
-    <button class="dropbtn">Evenimente
+    <button class="dropbtn" onclick = "deznat.html">Evenimente
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
@@ -56,7 +41,9 @@
 	Dacă aveți vreun anunț de publicat într-una dintre categorii. Să aveți o zi frumoasă!
 
 </div>
-<div
+<div id="noutati">
+	Noutăți
+</div>
 
 
 

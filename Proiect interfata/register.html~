@@ -10,12 +10,6 @@
 <link rel="stylesheet" type="text/css" href="header.css">
 
 
-
-
-
-
-
-
 </head>
 
 <body>
@@ -28,9 +22,9 @@
     </button>
     <div class="dropdown-content">
       <a href"deznat.html">Dezastre naturale</a>
-      <a href="#">Blocaje</a>
-      <a href="#">Accidente</a>
-      <a href="#">Acte de vandalism</a>
+      <a href="blocaje.html">Blocaje</a>
+     <a href="accidente.html">Accidente</a>
+      <a href="actevandalism.html">Acte de vandalism</a>
     </div>
   </div> 
   <a href="add.html">Adaugă eveniment</a>

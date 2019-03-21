@@ -62,6 +62,7 @@
 .anunturi{
 	float: left;
 	display: inline-block;
+
 	background-color: silver;
 	margin: 6px;
 
@@ -74,16 +75,18 @@
 	margin: 3px;
 	padding: 10px;
 	font-size: 24pt;
+	
 
 }
 .corpanunt{
+	float: left;
 	text-align: left;
 	font-family: Arial, Helvetica, sans-serif;
 
 
 
 	margin: 4px;
-	padding: 5;
+	padding: 10px;
 	display: inline-block;
 	font-size: 16pt;
 	text-indent: 1%;

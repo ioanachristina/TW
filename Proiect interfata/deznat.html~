@@ -37,9 +37,9 @@
     </button>
     <div class="dropdown-content">
       <a href="deznat.html">Dezastre naturale</a>
-      <a href="#">Blocaje</a>
-      <a href="#">Accidente</a>
-      <a href="#">Acte de vandalism</a>
+      <a href="blocaje.html">Blocaje</a>
+      <a href="accidente.html">Accidente</a>
+      <a href="actevandalism.html">Acte de vandalism</a>
     </div>
   </div> 
   <a href="add.html">Adaugă eveniment</a>
@@ -154,18 +154,10 @@ document.addEventListener("click", closeAllSelect);
 		<div class="data"> Joi , 26 octombrie 2019 , ora 13:43
 
 	<div class="titluanunt">
-		<b>CJSU Suceava a analizat situația alunecărilor de teren produse în urma inundațiilor</b>
+		<b>S-au produs inundații în Mărășăști, Suceava.</b>
 	</div>
 	<div class="corpanunt">
-		Comitetul Judetean pentru Situatii de Urgenta Suceava a supus discutiei, miercuri, 24 octombrie, situatia alunecarilor de teren produse la nivelul judetului Suceava, ca urmare a fenomenelor meteo-hidrologice periculoase din 2018.
-		In urma precipitatiilor abundente cazute in timpul verii, 31 de primarii din judetul Suceava au semnalat, prin rapoartele operative transmise Prefecturii Suceava, mai multe situatii de alunecari de teren. 
-		Acestea au fost constatate, la fata locului, si de catre comisiile constituite prin ordin de prefect, care au intocmit procese verbale de calamitate.
-
-		Ulterior, s-a decis ca problema alunecarilor de teren sa fie abordata pe larg, iar in acest sens, tot prin ordin de prefect, a fost constituit un grup de suport tehnic care a evaluat fiecare situatie in parte si a stabilit cateva masuri. 
-		Astfel, s-a propus monitorizarea permanenta a ariei de teren supusa alunecarii, lucrari de combatere a eroziunii solului efectuate in baza unui studiu geotehnic, efectuarea unui expertize tehnice pentru a se afla cauza, timpul si profunzimea alunecarii de teren, consolidarea malurilor cursurilor de apa acolo unde apa a generat alunecarea de teren, stramutarea unor case de locuit si anexelor acestora pe o parcela sigura.
-
-		Pe baza fiselor tehnice transmise de Prefectura Suceava, Oficiul de Cadastru si Publicitate Imobiliara a realizat cadastrarea zonelor respective, urmand sa fie stabiliti pasii in continuare, intrucat sunt zone cu alunecari de teren care presupun o expertizare de specialitate, intocmirea unor studii, pentru a putea fi accesate fonduri pentru rezolvarea problemelor. 
-		In acest sens, toata documentatia prezentata in cadrul sedintei CJSU a fost inaintata Consiliului Judetean, care are competente in delimitarea zonelor de risc, prin Hotarare de Consiliu Judetean
+		
 	</div>
 </div>
 

@@ -8,7 +8,7 @@
 
 <link rel="stylesheet" type="text/css" href="baranav+body.css">
 <link rel="stylesheet" type="text/css" href="header.css">
-<link rel="stylesheet" type="text/css" href="blocaje.css">
+<link rel="stylesheet" type="text/css" href="deznat.css">
 
 
 
@@ -150,19 +150,21 @@ then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
 </script>
 
-
 <div class="anunturi">
-		<div class="data"> 14 iunie 2018 , ora 20:30
+		<div class="data"> Luni , 21 ianuarie 2019 , ora 20.45
 
 	<div class="titluanunt">
-		<b>Drum în lucru în cartierul Dărmănești, zona Orion, Piatra Neamț.</b>
+		<b>Bijuterii furate dintr-un mall din Constanța</b>
 	</div>
 	<div class="corpanunt">
+		"La data de 21.01.2019, poliţiştii Secţiei 2 au fost sesizaţi de angajaţii unei societăţi comerciale
+		 din incinta unui complex comercial, din municipiul Constanţa, cu privire la faptul că, în noaptea
+		  de 20/21.01.2019, persoane necunoscute au pătruns în punctul de lucru, de unde ar fi sustras bijuterii din aur. Prejudiciul în cauză urmează a fi stabilit", reiese dintr-un comunicat transmis de IPJ Constanţa.
 
-
-
+		Poliţiştii au deschis un dosar de cercetare penală pentru săvârşirea infracţiunii de furt calificat, suspecţii în acest caz fiind în curs de identificare.
 	</div>
 </div>
+
 
 
 

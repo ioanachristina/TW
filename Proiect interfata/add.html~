@@ -37,7 +37,7 @@
     </button>
     <div class="dropdown-content">
       <a href="deznat.html">Dezastre naturale</a>
-      <a href="#">Blocaje</a>
+      <a href="blocaje.html">Blocaje</a>
       <a href="#">Accidente</a>
       <a href="#">Acte de vandalism</a>
     </div>
