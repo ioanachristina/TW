@@ -6,16 +6,18 @@
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 10%;
+  width: 5%;
 }
 
 .button:hover {
   opacity: 0.8;
 }
+
 span.psw{
 float : right;
 padding-top: 16px;
 }
+
 input[type=text] {
   width: 25%;
   padding: 12px;
@@ -23,21 +25,24 @@ input[type=text] {
   display: inline-block;
   border: 1px solid #ccc;
   background-origin: border-box;
-
 }
+
 label{
 	display: inline-table;
 	font-size: 20pt;
 }
+
 .pass{
 	margin-top: 30px;
 	text-align: center;
 }
+
 #titlu{
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 20pt;
 	color: violet;
 }
+
 #box{
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 17pt;
