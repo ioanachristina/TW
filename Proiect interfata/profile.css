@@ -8,6 +8,10 @@ img{
     width: 850px;
     
 }
+#star{
+	height: 20px;
+	width: 20px;
+}
 .LeftCol{
 	display: inline-block;
 	float: left;
