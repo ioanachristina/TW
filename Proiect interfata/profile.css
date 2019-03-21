@@ -103,10 +103,24 @@ img{
 	border-right-style: solid;
 	border-right-width: 2px;
 }
+#rank{
+	color : indigo;
+	font-size: 125%;
+	font-family: Arial, Helvetica, sans-serif;
+	border-bottom-color: purple;
+	border-bottom-style: solid;
+	border-bottom-width: 4px;
+	border-left-color: violet;
+	border-left-style: solid;
+	border-left-width: 2px;
+	border-right-color: violet;
+	border-right-style: solid;
+	border-right-width: 2px;
+}
+}
 #descriere{
 
 	color : indigo;
-
 	font-size: 125%;
 	font-family: Arial, Helvetica, sans-serif;
 	border-bottom-color: purple;
