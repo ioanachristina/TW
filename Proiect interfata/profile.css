@@ -16,6 +16,7 @@ img{
 	display: inline-block;
 	float: left;
 	text-align: center;
+	margin: 55px;
 
 }
 .RightCol{
@@ -119,16 +120,27 @@ img{
 	border-right-style: solid;
 	border-right-width: 2px;
 }
+#rank{
+	color : indigo;
+
+	font-size: 125%;
+	font-family: Arial, Helvetica, sans-serif;
+
+	border-left-color: violet;
+	border-left-style: solid;
+	border-left-width: 2px;
+	border-right-color: violet;
+	border-right-style: solid;
+	border-right-width: 2px;
+}
 .button{
 	margin-top: 10px;
 
 	font-size: 150%;
-	-moz-box-shadow: 3px 4px 0px 0px #899599;
-	-webkit-box-shadow: 3px 4px 0px 0px #899599;
+
 	box-shadow: 3px 4px 0px 0px #899599;
 	background-color:transparent;
-	-moz-border-radius:15px;
-	-webkit-border-radius:15px;
+
 	border-radius:15px;
 	border:1px solid #d6bcd6;
 	display:inline-block;

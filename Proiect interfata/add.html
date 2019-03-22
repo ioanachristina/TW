@@ -56,11 +56,12 @@
         <label for="country">Tipul evenimentului</label>
       </div>
       <div class="col-75">
-        <select id="country" name="country">
-          <option value="dezastre_naturale">Dezastre naturale</option>
-          <option value="blocaje">Blocaje</option>
-          <option value="accidente">Accidente</option>
-          <option value="acte_de_vandalism">Acte de vandalism</option>
+        <select id="country" name="country" required>
+        		<option value="">Alegeti categoria</option>
+         	<option value="dezastre_naturale">Dezastre naturale</option>
+          	<option value="blocaje">Blocaje</option>
+          	<option value="accidente">Accidente</option>
+         	<option value="acte_de_vandalism">Acte de vandalism</option>
         </select>
       </div>
     </div>
@@ -69,16 +70,24 @@
         <label for="fname">Localitatea în care are loc</label>
       </div>
       <div class="col-75">
-        <input type="text" id="loc" name="localitate" placeholder="Localitatea...">
+        <input type="text" id="loc" name="localitate" placeholder="Localitatea..." required>
       </div>
     </div>
 
     <div class="row">
       <div class="col-25">
+        <label for="data">Data:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="data" name="data" placeholder="Data la care a avut loc..." required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
         <label for="subject">Detalii suplimentare</label>
       </div>
       <div class="col-75">
-        <textarea id="detalii" name="detalii" placeholder="Detalii..." style="height:200px"></textarea>
+        <textarea id="detalii" name="detalii" placeholder="Detalii..." style="height:150px" required></textarea>
       </div>
     </div>
     <div class="row">

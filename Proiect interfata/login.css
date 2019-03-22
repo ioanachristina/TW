@@ -4,11 +4,12 @@ input[type=text], input[type=password] {
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
-  box-sizing: border-box;
+
 }
 label{
 	display: inline-table;
 }
+
 .button1 {
   background-color: #4CAF50;
   color: white;
@@ -25,4 +26,15 @@ label{
 span.psw{
 float : right;
 padding-top: 16px;
+}
+#log{
+	color: black;
+	font-size: 25px;
+	opacity: 0.2;
+}
+fieldset{
+	display: block;
+  	margin-left: 300px;
+  	margin-right: 300px;
+  	border: 2px groove;
 }
