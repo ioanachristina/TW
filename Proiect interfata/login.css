@@ -33,8 +33,9 @@ padding-top: 16px;
 	opacity: 0.2;
 }
 fieldset{
-	display: block;
+	display: inherit;
   	margin-left: 300px;
   	margin-right: 300px;
   	border: 2px groove;
+
 }
