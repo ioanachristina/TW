@@ -1,0 +1,10 @@
+#header{
+	background-color: lightskyblue;
+	background-image: url(logo.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	color : white;
+	cursor: pointer;
+	padding: 5%;
+	margin: 0 auto;
+}
