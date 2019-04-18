@@ -1,8 +1,9 @@
 <?php include('server.php');?>
+<!DOCTYPE html>
 <html>
 
 <head>
-<title>CityZen</title>
+<title>Aparitia Cersetoriei - CityZen</title>
 
 
 <link rel="stylesheet" type="text/css" href="nav1.css">
@@ -10,7 +11,6 @@
 <link rel="stylesheet" type="text/css" href="indeex1.css">
 
 </head>
-<body>
 <body>
 <h1 id="header" onclick="window.location.href='index1.php'"></h1>
 <div class="navbar">
@@ -27,10 +27,9 @@
 	  <a href="apartiecersetori1.php">Aparitia cersetoriei</a>
     </div>
   </div> 
-  <a href="add.php">Adauga eveniment</a>
-
+    <a href="add.php">Adauga eveniment</a>
   <div class="right">
-  	  	<!-- logged in user information -->
+  	<!-- logged in user information -->
     <?php  if (isset($_SESSION['username'])) : ?>
     	<p class="welcome">Welcome, <strong style="color:lightblue" ><?php echo $_SESSION['username']; ?></strong></p>
     	 
@@ -43,7 +42,7 @@
 
 <div id="Main">
   <?php
-	$sqlget = "SELECT * FROM addtable where tip = 'dezastre_naturale'";
+	$sqlget = "SELECT * FROM addtable where tip = 'aparitia_cersetoriei'";
 	$sqldata = mysqli_query($db, $sqlget) or die ('error getting infos');
 	
 	
@@ -71,4 +70,5 @@
 </div>
 
 </body>
+
 </html>

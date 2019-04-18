@@ -1,7 +1,7 @@
 	<?php 
 		include("server.php");
 
-		if(isset($_POST) & !empty($_POST)){
+	if(isset($_POST['trimite'])){
 		$email = mysqli_real_escape_string($db, $_POST['email']);
 		$sql = "SELECT * FROM users WHERE email = '$email'";
 		$res = mysqli_query($db, $sql);
@@ -19,9 +19,9 @@
  
 $message = "Please use this password to login " . $password;
 $headers = "From : office@cityzen.ro";
-if(mail($to, $subject, $message, $headers)){
-	echo "Your Password has been sent to your email id";
-}else{
-	echo "Failed to Recover your password, try again";
-}
+	if(mail($to, $subject, $message, $headers)){
+	echo "<p id='succes'>Verificati mail-ul</p>";
+	}else{
+	echo "<p id='fail'> Email-ul nu exista</p>";
+	}
 	?>

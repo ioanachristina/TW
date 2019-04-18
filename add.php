@@ -8,7 +8,7 @@
 
 <link rel="stylesheet" type="text/css" href="nav1.css">
 <link rel="stylesheet" type="text/css" href="header1.css">
-<link rel="stylesheet" type="text/css" href="add1.css">
+<link rel="stylesheet" type="text/css" href="add2.css">
 
 </head>
 <body>
@@ -24,6 +24,7 @@
       <a href="blocaje1.php">Blocaje</a>
       <a href="accidente1.php">Accidente</a>
       <a href="actevandalism1.php">Acte de vandalism</a>
+	  <a href="apartiecersetori1.php">Aparitia cersetoriei</a>
     </div>
   </div> 
   <a href="add.php">Adauga eveniment</a>
@@ -59,6 +60,7 @@
           	<option value="blocaje">Blocaje</option>
           	<option value="accidente">Accidente</option>
          	<option value="acte_de_vandalism">Acte de vandalism</option>
+			<option value="aparitia_cersetoriei">Aparitia cersetoriei </option>
      </select>
     <input type="text" placeholder="Titlu anunt" name="titlu" required>
     <input type="text" name="localitate" placeholder="Localitatea in care a avut loc" >

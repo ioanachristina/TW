@@ -1,9 +1,8 @@
-<!DOCTYPE html>
+
 <html>
 
 <head>
 <title>Recuperare parola - CityZen</title>
-
 
 <link rel="stylesheet" type="text/css" href="baranav+body.css">
 <link rel="stylesheet" type="text/css" href="header1.css">
@@ -25,6 +24,7 @@
       <a href="blocaje.php">Blocaje</a>
       <a href="accidente.php">Accidente</a>
       <a href="actevandalism.php">Acte de vandalism</a>
+	  <a href="apartiecersetori.php">Aparitia cersetoriei</a>
     </div>
   </div> 
   <div class="right">
@@ -34,6 +34,11 @@
 </div>
 <div class="user">
 <form class="form"  method="POST" action="mail.php">
+	<?php include('errors.php') ?>
+
+		<center><?php if(!empty($success_message)) { ?>	
+		<div class="success"><?php if(isset($success_message)) echo $success_message; ?></div>
+		<?php } ?></center>
 	<header class = "user__header">
 		<h2 class="user__title"> <h1>Ati uitat parola?</h1>
 				<p>Va rugam,introduceti adresa de e-mail mai jos. Veti primi un link pentru resetarea parolei.</p></h3>

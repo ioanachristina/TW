@@ -38,6 +38,7 @@
       <a href="blocaje1.php">Blocaje</a>
       <a href="accidente1.php">Accidente</a>
       <a href="actevandalism1.php">Acte de vandalism</a>
+	  <a href="apartiecersetori1.php">Aparitia cersetoriei</a>
     </div>
   </div> 
   <a href="add.php">Adauga eveniment</a>

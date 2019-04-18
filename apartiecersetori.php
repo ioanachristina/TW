@@ -1,49 +1,41 @@
 <?php include('server.php');?>
+<!DOCTYPE html>
 <html>
 
 <head>
-<title>CityZen</title>
+<title>Aparitia Cersetoriei - CityZen</title>
 
 
-<link rel="stylesheet" type="text/css" href="nav1.css">
+<link rel="stylesheet" type="text/css" href="baranav+body.css">
 <link rel="stylesheet" type="text/css" href="header1.css">
 <link rel="stylesheet" type="text/css" href="indeex1.css">
 
 </head>
 <body>
-<body>
-<h1 id="header" onclick="window.location.href='index1.php'"></h1>
+<h1 id="header" onclick="window.location.href='index.php'"></h1>
 <div class="navbar">
-  <a href="index1.php">Pagina principala</a>
+  <a href="index.php">Pagina principala</a>
   <div class="dropdown">
     <button class="dropbtn" onclick = "#">Evenimente
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="deznat1.php">Dezastre naturale</a>
-      <a href="blocaje1.php">Blocaje</a>
-      <a href="accidente1.php">Accidente</a>
-      <a href="actevandalism1.php">Acte de vandalism</a>
-	  <a href="apartiecersetori1.php">Aparitia cersetoriei</a>
+      <a href="deznat.php">Dezastre naturale</a>
+      <a href="blocaje.php">Blocaje</a>
+      <a href="accidente.php">Accidente</a>
+      <a href="actevandalism.php">Acte de vandalism</a>
+	  <a href="apartiecersetori.php">Aparitia cersetoriei</a>
     </div>
   </div> 
-  <a href="add.php">Adauga eveniment</a>
-
   <div class="right">
-  	  	<!-- logged in user information -->
-    <?php  if (isset($_SESSION['username'])) : ?>
-    	<p class="welcome">Welcome, <strong style="color:lightblue" ><?php echo $_SESSION['username']; ?></strong></p>
-    	 
-    <?php endif ?>
-	<a href="logout.php" >LogOut</a>
-	<a href="profile.php" name="profile">Profil</a>
+  	<a href="login.php">Login</a>
 
   	</div>
 </div>
 
 <div id="Main">
   <?php
-	$sqlget = "SELECT * FROM addtable where tip = 'dezastre_naturale'";
+	$sqlget = "SELECT * FROM addtable where tip = 'aparitia_cersetoriei'";
 	$sqldata = mysqli_query($db, $sqlget) or die ('error getting infos');
 	
 	
@@ -71,4 +63,5 @@
 </div>
 
 </body>
+
 </html>
