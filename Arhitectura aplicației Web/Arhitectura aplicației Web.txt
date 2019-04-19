@@ -8,7 +8,7 @@ Utilizatorii nelogați vor beneficia de următoarele privilegii:
 	- vizualizare evenimente postate;
 	- vizualizare detalii și comentarii pentru evenimentele postate;
 	- filtrare și sortare a evenimentelor cu scopul de a ușura găsirea noutăților dorite;
-	- vizualizare profil a utilizatorilor;
+	- vizualizare profil al utilizatorilor;
 	
 Utilizatorii logați beneficiază de toate privilegiile utilizatorilor nelogați, la care se mai adaugă:
 	- adăugare de evenimente;
