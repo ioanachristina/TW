@@ -1,1 +1,1 @@
-# TW
+Proiectul presupune crearea unei aplicații Web dedicate activităților/evenimentelor petrecute într-un anumit oraș (evenimente precum accidente, vandalizări, indicatoare care lipsesc, dezastre naturale, avertismente importante, zone din oraș în care circulația a fost oprită, zone aflate momentan în construcție etc.)
