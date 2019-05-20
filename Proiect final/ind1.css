@@ -1,0 +1,108 @@
+
+#Main
+{
+	font-family: Arial, Helvetica, sans-serif;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0 auto;
+	min-height: 500px;
+}
+
+#noutati{
+	font-family:  Arial, Helvetica, sans-serif;
+	font-size: 20pt;
+	text-align: left;
+	margin-top: 5px;
+	display: inherit;
+	margin-left: 6px;
+	text-decoration: underline;
+	color : green;
+	float: left;
+}
+.fa {
+  font-size: 20px;
+  cursor: pointer;
+  user-select: none;
+  float: right;
+}
+
+.fa:hover {
+  color: darkblue;
+}
+.like{
+    background: #8797E5;
+	color: #fff;
+	border: 1px solid #eee;
+	border-radius: 20px;
+	box-shadow: 5px 5px 5px #eee;
+	text-shadow:none;
+	height: 5%;
+    width: 100%;
+	text-align: center;
+	cursor: pointer;
+}
+.like:hover{
+    background: rgb(156, 84, 238);	
+	color: #fff;
+	border: 1px solid #eee;
+	border-radius: 20px;
+	box-shadow: 5px 5px 5px #eee;
+    text-shadow:none;
+	cursor: pointer;
+}
+.like{
+	float:left;
+	margin-left: 43%;
+	width: 15%;
+	margin-top:1%;
+}
+.btn {
+    display: block;
+    width: 55%;
+    padding: 20px;
+    font-family: Roboto;
+    -webkit-appearance: none;
+    outline: 0;
+    border: 0;
+    color: black;
+    background: #D2ACFD;
+    transition: 0.3s;
+
+}
+.btn:hover{
+	background: #9980B5 ;
+}
+.EventBox{
+    width: 45%;
+    min-width: 45%;
+    max-width: 45%;
+    max-height: 400px;
+    min-height: 400px;
+	background: #509fc4;
+	margin: 0 auto;
+	border-radius: 10px;
+	color: #fff;
+	padding: 0px;
+	float:left;
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-top: 1%;
+	padding: 1.5%;
+	margin-bottom: 32px;
+}
+
+
+body{
+	padding: 0px;
+	margin: 0px;
+}
+
+.EventBox h2{
+	text-align: center;
+	margin-bottom: 35px;
+}
+.newTitle{
+	color:#000;
+	margin-left: 1%;
+}
