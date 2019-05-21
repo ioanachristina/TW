@@ -12,6 +12,44 @@
 
 </head>
 <body>
+
+<!--
+<div class="topnav">
+  <input type="text" id="Search" onkeyup="myFunction()" placeholder="Cauta evenimente...">
+</div>
+-->
+
+<!--
+<?php
+$con=mysqli_connect("example.com","peter","abc123","my_db");
+// Check connection
+if (mysqli_connect_errno())
+{
+echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+
+$result = mysqli_query($con,"SELECT * FROM Persons");
+
+echo "<table border='1'>
+<tr>
+<th>Firstname</th>
+<th>Lastname</th>
+</tr>";
+
+while($row = mysqli_fetch_array($result))
+{
+echo "<tr>";
+echo "<td>" . $row['FirstName'] . "</td>";
+echo "<td>" . $row['LastName'] . "</td>";
+echo "</tr>";
+}
+echo "</table>";
+
+mysqli_close($con);
+?>
+
+-->
+
 <h1 id="header" onclick="window.location.href='index.html'"></h1>
 <div class="navbar">
   <a href="index.html">Pagina principală</a>
@@ -36,7 +74,64 @@
 
 <div id="Main">
 
- <h2 class="newTitle">Cele mai recente evenimente</h2>
+ <h2 class="newTitle">Cele mai recente evenimente&ensp;
+         <span style="font-weight:normal;">
+                <font face="Roboto" size="4" onclick="showFiltering()">
+                    <img src="filter-icon.svg" alt="Filter icon" width="20" height="20"> FILTREAZĂ</font></span></h2>
+
+ <div id="filter-panel">
+    <div class="FilterBox">
+        <p>Tip: 
+            <input type="checkbox" name="accidente" value="Accidente">Accidente 
+            <input type="checkbox" name="acte_de_vandalism" value="Acte de vandalism">Acte de vandalism 
+            <input type="checkbox" name="blocaje" value="Blocaje">Blocaje
+            <input type="checkbox" name="dezastre naturale" value="Dezastre naturale">Dezastre naturale
+        </span>
+        <!-- &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; -->
+        </p>
+
+        <p><span style="float:center">Localitate:
+         <select name="localitate">
+                <option value="harlau">Hârlău</option>
+                <option value="iasi">Iași</option>
+                <option value="letcani">Lețcani</option>
+                <option value="madarjesti">Mădârjești</option>
+                <option value="marasesti">Mărășești</option>
+            </select>
+        </span>
+
+        <!-- &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; -->
+
+        <span style="float:right">Data:
+            <input type="date" name="data">
+        </span>
+        </p>
+    </div>
+</div>
+
+<p id="p1"></p>
+
+<script>
+var ok = 0;
+
+function showFiltering() {
+
+if(ok) {
+    document.getElementById("filter-panel").style.display = "none";
+
+    document.getElementById("p1").innerHTML = "";
+
+    ok = 0;
+}
+
+else {
+    document.getElementById("filter-panel").style.display = "block";
+    document.getElementById("p1").innerHTML = "<br><br><br><br><br><br><br><br>";
+    ok = 1;
+    }
+}
+</script>
+
 
   <div class="EventBox">
     <h2>Accident la Hârlău</h2>
@@ -98,13 +193,26 @@
 
 </div>
 
-
-
-
-
-
-
-
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("Search");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
 
 </body>
 
