@@ -6,16 +6,16 @@ include('server.php');
 <title>CityZen</title>
 
 
-<link rel="stylesheet" type="text/css" href="nav1.css">
+<link rel="stylesheet" type="text/css" href="nav.css">
 <link rel="stylesheet" type="text/css" href="header1.css">
-<link rel="stylesheet" type="text/css" href="adm.css">
+<link rel="stylesheet" type="text/css" href="adm1.css">
 
 
 </head>
 <body>
 <body>
 <h1 id="header" onclick="window.location.href='index1.php'"></h1>
-<div class="navbar">
+<form class="navbar" method='POST'>
   <a href="index1.php">Pagina principala</a>
   <div class="dropdown">
     <button class="dropbtn" onclick = "#">Evenimente
@@ -38,10 +38,50 @@ include('server.php');
     <?php endif ?>
 	<a href="logout.php" name="log_out" >Log Out</a>
 	<a href="profile.php" name="profile">Profil</a>
-	
+<div class="dropdown">
+<?php
+$user = $_SESSION['username'];
+		$q1="select user_id from users where username='$user'";
+		$r= mysqli_query($db,$q1);
+		$row=mysqli_fetch_array($r,MYSQLI_ASSOC);
+		$idu=$row['user_id'];
+		$q2 = " SELECT count(*) as 'count' FROM notification WHERE id_user=$idu and isRead=0";
+		$r1 = mysqli_query($db,$q2);
+		$row1 = mysqli_fetch_assoc($r1);
 
-  	</div>
+?>
+		<input type= "submit" class="dropbtn"  name="notif" value="Notificari (<?php echo $row1['count'];?>)"/>
+			<i class = "fa fa-caret-down"></i>
+		<div class="dropdown-content">
+		<?php
+		$q="SELECT * FROM NOTIFICATION WHERE id_user=$idu order by isRead asc  LIMIT 5";
+		$r = mysqli_query($db,$q);
+		if(isset($_POST['notif'])){
+			$user = $_SESSION['username'];
+			$q1="select user_id from users where username='$user'";
+			$r= mysqli_query($db,$q1);
+			$row=mysqli_fetch_array($r,MYSQLI_ASSOC);
+			$idu=$row['user_id'];
+			$q12 = "UPDATE notification set isRead=1 where id_user='$idu'";
+			mysqli_query($db,$q12);
+			$page = $_SERVER['PHP_SELF'];
+		echo '<meta http-equiv="Refresh" content="0;' . $page . '">';
+		}
+		while($row=mysqli_fetch_array($r,MYSQLI_ASSOC)){
+			if($row['isRead']==0){
+			echo "<p><b>".$row['mesaj']."</b></p>";
+			echo "<hr>";
+			}
+			else {
+				echo "<p>".$row['mesaj']."</p>";
+				echo "<hr>";
+			}
+		}
+		
+		?></div>
+	</div>
 </div>
+</form>
 <div>
 <?php
 	$sqlget = "SELECT * FROM perms ";
@@ -98,10 +138,13 @@ include('server.php');
     $data=$row['data_form'];
     $detalii=$row['detalii'];
     $user=$row['user_id'];
+	$msg = "Anuntul tau a fost postat!";
 
 	$q="INSERT INTO addtable (id, tip,titlu,localitate,data_form,detalii,user_id)
           VALUES ('$i','$tip','$titlu','$localitate','$data','$detalii','$user')";
+	$q2 = "INSERT INTO notification (id_user,id_anunt,mesaj) values ($user,$i,'$msg')";
     mysqli_query($db,$q);
+	mysqli_query($db,$q2);
     $q1="DELETE FROM perms where id='$id'";
     mysqli_query($db,$q1);
 	header('LOCATION: adminperm.php');
@@ -111,10 +154,13 @@ include('server.php');
     $query="SELECT * FROM perms where id='$i'";
     $rq=mysqli_query($db,$query);
     $row=mysqli_fetch_array($rq,MYSQLI_ASSOC);
+	$user=$row['user_id'];
 	$q="DELETE FROM perms where id='$i'";
+	$msg = "Anuntul tau a fost sters!";
+	$q1 = "INSERT INTO notification (id_user,id_anunt,mesaj) values ($user,$i,'$msg')";
+	mysqli_query($db,$q1);
 	mysqli_query($db,$q);
 	header('location: adminperm.php');
-
   }
 ?>	
 </div>

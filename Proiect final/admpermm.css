@@ -39,6 +39,10 @@
 	width: 15%;
 	margin-top:1%;
 }
+body{
+	padding: 0px;
+	margin: 0px;
+}
 
 #roles {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;

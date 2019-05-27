@@ -6,15 +6,15 @@ include('server.php');
 <title>CityZen</title>
 
 
-<link rel="stylesheet" type="text/css" href="nav1.css">
+<link rel="stylesheet" type="text/css" href="nav.css">
 <link rel="stylesheet" type="text/css" href="header1.css">
-<link rel="stylesheet" type="text/css" href="profil.css">
+<link rel="stylesheet" type="text/css" href="profile1.css">
 
 </head>
 
 <body>
 <h1 id="header" onclick="window.location.href='index1.php'"></h1>
-<div class="navbar">
+<form class="navbar" method='POST' action = 'profile.php'>
   <a href="index1.php">Pagina principala</a>
   <div class="dropdown">
     <button class="dropbtn" onclick = "#">Evenimente
@@ -37,13 +37,51 @@ include('server.php');
     <?php endif ?>
 	<a href="logout.php" name="log_out" >Log Out</a>
 	<a href="profile.php" name="profile">Profil</a>
-	<div class="dropdown-content">
-	
+<div class="dropdown">
+<?php
+$user = $_SESSION['username'];
+		$q1="select user_id from users where username='$user'";
+		$r= mysqli_query($db,$q1);
+		$row=mysqli_fetch_array($r,MYSQLI_ASSOC);
+		$idu=$row['user_id'];
+		$q2 = " SELECT count(*) as 'count' FROM notification WHERE id_user=$idu and isRead=0";
+		$r1 = mysqli_query($db,$q2);
+		$row1 = mysqli_fetch_assoc($r1);
+
+?>
+		<input type= "submit" class="dropbtn"  name="notif" value="Notificari (<?php echo $row1['count'];?>)"/>
+			<i class = "fa fa-caret-down"></i>
+		<div class="dropdown-content">
+		<?php
+		$q="SELECT * FROM NOTIFICATION WHERE id_user=$idu order by isRead asc  LIMIT 5";
+		$r = mysqli_query($db,$q);
+		if(isset($_POST['notif'])){
+			$user = $_SESSION['username'];
+			$q1="select user_id from users where username='$user'";
+			$r= mysqli_query($db,$q1);
+			$row=mysqli_fetch_array($r,MYSQLI_ASSOC);
+			$idu=$row['user_id'];
+			$q12 = "UPDATE notification set isRead=1 where id_user='$idu'";
+			mysqli_query($db,$q12);
+			$page = $_SERVER['PHP_SELF'];
+		echo '<meta http-equiv="Refresh" content="0;' . $page . '">';
+		}
+		while($row=mysqli_fetch_array($r,MYSQLI_ASSOC)){
+			if($row['isRead']==0){
+			echo "<p><b>".$row['mesaj']."</b></p>";
+			echo "<hr>";
+			}
+			else {
+				echo "<p>".$row['mesaj']."</p>";
+				echo "<hr>";
+			}
+		}
+		
+		?></div>
 	</div>
-		<a href="">Notifications </a>
-  	</div>
 </div>
-	<form class="ProfilePage">
+</form>
+	<form class="ProfilePage" method='POST'>
 		
 <?php
 
@@ -91,6 +129,7 @@ include('server.php');
 		if($row['role_name']=="SuperUser") {
 			echo "<a href='adminperm.php'><input type='button' class='adminp' onclick='window.location.href="."'adminperm.php'"."'"." value='Anunturi adaugate'/></a>";
 		}
+		echo "<span><a href='editable.php'><input type='button' class='adminp' onclic = 'window.location.href="."'editable.php'"."'"." value = 'Editeaza Profilul'/></a></span>";
 		echo "</div>";
 		
 	}

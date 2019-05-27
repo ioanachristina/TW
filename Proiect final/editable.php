@@ -8,10 +8,10 @@ include('server.php');
 
 <link rel="stylesheet" type="text/css" href="nav.css">
 <link rel="stylesheet" type="text/css" href="header1.css">
-<link rel="stylesheet" type="text/css" href="index.css">
-<link rel="stylesheet" type="text/css" href="admpermm.css">
+<link rel="stylesheet" type="text/css" href="profile1.css">
 
 </head>
+
 <body>
 <h1 id="header" onclick="window.location.href='index1.php'"></h1>
 <form class="navbar" method='POST'>
@@ -81,57 +81,74 @@ $user = $_SESSION['username'];
 	</div>
 </div>
 </form>
-<div class="data-collection">
+	<form class="ProfilePage" method="POST">
+		
 <?php
-	$query="SELECT * FROM users 
+
+	$sqlget = "SELECT * FROM users 
 				JOIN USER_ROLE ON USER_ROLE.USER_ID=USERS.USER_ID
 				JOIN ROLES ON ROLES.ROLE_ID=USER_ROLE.ROLE_ID
-				ORDER BY USER_ROLE.USER_ID ASC";
-	$result=mysqli_query($db,$query);
-	while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-		$id= $row['user_id'];
-		echo "<form class='Main' method='POST'>";
-		echo "<div><span>Info</span><span></span></div>";
-		echo "<div><span>Actual role </span>";
-		echo "<span>".$row['role_name']."</span></div>";
-		echo "<div><span>Username</span>";
-		echo "<span>".$row['username']."</span></div>";
-		echo "<div><span> User ID </span>";
-		echo "<span>".$row['user_id']."</span></div>";
-		echo "<div><span> Change role </span>";
-		echo "</span><select name='rol' >";
-		echo "<option value = '' selected = 'selected'></option>";
-		echo "<option value = 'User'>User</option>";
-		echo "<option value = 'SuperUser'>SuperUser </option>";
-		echo "<option value = 'Admin' > Admin </option>";
-		echo "</select></span></div>";
-		echo "<button type='submit' class='but' name='aplica'> Apply </button>";
-		echo "<input type='hidden' name='idhidd' value='$id' />";
+				WHERE username= '".$_SESSION['username']."'";
+	$sqldata = mysqli_query($db, $sqlget) or die ('error getting infos');
+	
+	
+	while($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)){
+		echo "<div class='LeftCol'>";
+		if($row['role_name']=="Admin") {
+			echo "<img src = 'avataradmin.png' id='avatar' />";
+		}
+		else if($row['role_name']=="SuperUser"){
+				echo "<img src = 'avatarsuperuser.png' id='avatar' />";
+		}
+		else{
+		echo "<img src = 'avataruser.png' id='avatar' />";
+		}
+		echo "<h3 class='num1'>";
+
+		echo "</h3>";
+		echo "</div>";
+		echo "<div class='RightCol'>";
+		echo "<p class='num'>Nume: <input type='text' name='nume' /></p>";
+		echo "<p class='num'>Prenume:  <input type='text' name='prenume' /></p>";
+		echo "<p class='num'> Username : ";
+		echo $row['username'];
+		if($row['role_name']=="Admin") echo "<img src = 'star.png' id='star' />";
+		echo "<i> ( "."<i style='color:red'>".$row['role_name']."</i> ) </i>";
+		echo "</p>";
+		echo "<p class='num'> Email :  <input type='email' name='email' /> </p>";
+		echo "<p class='num'> Localitate :  <input type='text' name='loc' /></p>";
+
+		echo "<input type='submit' name='save' class = 'adminp' value='Save' />";
 		echo "</form>";
+		
 	}
 	
-?>
-</div>
+	if(isset($_POST['save'])){
+		$nume = $_POST['nume'];
+		$prenume = $_POST['prenume'];
+		$email = $_POST['email'];
+		$localitate = $_POST['loc'];
+		if($nume != ""){
+			$q="UPDATE USERS set nume='$nume' where username='".$_SESSION['username']."'";
+			mysqli_query($db,$q);
+		}
+		if($prenume != ""){
+			$q="UPDATE USERS set prenume='$prenume' where username='".$_SESSION['username']."'";
+			mysqli_query($db,$q);
+		}
+		if($email != "") {
+			$q1="UPDATE USERS set EMAIL='$email' where username='".$_SESSION['username']."'";
+			mysqli_query($db,$q1);
+		}
+		if($localitate != ""){
+			$q2="UPDATE USERS set LOCALITATE='$localitate' where username='".$_SESSION['username']."'";
+			mysqli_query($db,$q2);
+		}
+		header('location:profile.php');
+	}	
+?>	
+	</form>	
 
 
-<?php
-
-	if(isset($_POST['aplica'])){
-			$tipRol = mysqli_real_escape_string($db, $_POST['rol']);
-			$user_id = mysqli_real_escape_string($db, $_POST['idhidd']);
-			$s = " select role_id from roles where role_name='$tipRol'";
-			$r = mysqli_query($db,$s);
-			$rw= mysqli_fetch_array($r,MYSQLI_ASSOC);
-			$rol=$rw['role_id'];
-
-			$s1="update user_role 
-				set role_id=$rol
-					where user_id='$user_id'";
-			mysqli_query($db,$s1);
-			$page = $_SERVER['PHP_SELF'];
-			echo '<meta http-equiv="Refresh" content="0;' . $page . '">';
-
-	}
-?>
 </body>
 </html>

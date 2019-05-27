@@ -1,0 +1,20 @@
+$query = "SELECT * FROM ADDTABLE";
+		$result = mysqli_query($db,$query);
+		$response = array();
+		$posts = array();
+		
+		while($row = mysqli_fetch_assoc($result)){
+			$tipEveniment = $row['tip'];
+			$titlu = $row['titlu'];
+			$localitate = $row['localitate'];
+			$data = $row['data_form'];
+			$detalii = $row['detalii'];
+			$user_id = $row['user_id'];
+			
+			$posts[]=array('tip'=>$tipEveniment,'titlu'=>$titlu,'localitate'=>$localitate,'data'=>$data,'detalii'=>detalii,'user_id'=>$user_id);
+		}
+		$response['posts'] = $posts;
+		
+		$fp = fopen('results.json','w');
+		fwrite($fp, json_encode($response));
+		fclose($fp);

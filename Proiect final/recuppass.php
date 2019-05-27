@@ -1,4 +1,4 @@
-
+<?php include('mail.php');?>
 <html>
 
 <head>
@@ -33,7 +33,7 @@
   	</div>
 </div>
 <div class="user">
-<form class="form"  method="POST" action="mail.php">
+<form class="form"  method="POST" action="recuppass.php">
 	<?php include('errors.php') ?>
 
 		<center><?php if(!empty($success_message)) { ?>	
@@ -41,7 +41,7 @@
 		<?php } ?></center>
 	<header class = "user__header">
 		<h2 class="user__title"> <h1>Ati uitat parola?</h1>
-				<p>Va rugam,introduceti adresa de e-mail mai jos. Veti primi un link pentru resetarea parolei.</p></h3>
+				<p>Va rugam,introduceti adresa de e-mail mai jos. Veti primi un mail cu parola.</p></h3>
 		<div class="form__group">
 			<input type="email" placeholder="Email" class="form__input" name="email" required >
 		</div>

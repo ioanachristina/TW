@@ -1,0 +1,25 @@
+<input type="submit" class="jsn" name="json" value="Download as JSON" />
+
+<?php
+	if(isset($_POST['json'])){
+		$query = "SELECT * FROM ADDTABLE";
+		$result = mysqli_query($db,$query);
+		$jsonArray = array();
+		
+		if(mysqli_num_rows($result)>0){
+			while($row = mysqli_fetch_assoc($result)){
+				$jsonArrayItem = array();
+				$jsonArrayItem['tip'] = $row['tip'];
+				$jsonArrayItem['titlu'] = $row['titlu'];
+				$jsonArrayItem['localitate'] = $row['localitate'];
+				$jsonArrayItem['data'] = $row['data_form'];
+				$jsonArrayItem['detalii'] = $row['detalii'];
+				$jsonArrayItem['user_id'] = $row['user_id'];
+				array_push($jsonArray, $jsonArrayItem);
+			}
+		}
+		header('Content-type: application/json');
+		echo json_encode($jsonArray);
+	}
+?>
+
