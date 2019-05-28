@@ -82,7 +82,7 @@ if (isset($_POST['login_user'])) {
   }
 
   if (count($errors) == 0) {
-  	$password = md5($password);
+  	$password = base64_encode($password);
   	$query = "SELECT * FROM users 
 				join user_role on user_role.user_id=users.user_id
 				join roles on roles.role_id=user_role.role_id
@@ -97,7 +97,7 @@ if (isset($_POST['login_user'])) {
   	  $_SESSION['success'] = "Te-ai logat!";
 	  $id = $r['user_id'];
 	  $que="UPDATE users 
-			SET log_in=$id 
+			SET log_in='$id' 
 			WHERE username='$username'";
 	  mysqli_query($db,$que);
 	  header('location:profile.php');
@@ -107,20 +107,7 @@ if (isset($_POST['login_user'])) {
   }
 	$_SESSION['succes']="V-ati logat cu succes";
 	$id = $r['user_id'];
-}
-
-//LOG OUT
-if (isset($_SESSION['log_out']))
-{
-    $que="UPDATE users 
-			SET log_in=NULL 
-			WHERE username='$username'";
-	  mysqli_query($db,$que);
-	  session_destroy();
-
-header('Location: login.php');
-}
-		
+}		
 
 //ADAUGA ANUNT	
 
@@ -166,26 +153,11 @@ header('Location: login.php');
 	}
 }
 
-//Accepta anunt
-if(isset($_POST['accept'])){
-	$query="SELECT * FROM perms";
-	$rq=mysqli_query($db,$query);
-	$row=mysqli_fetch_array($rq,MYSQLI_ASSOC);
-	$tip=$row['tip'];
-	$titlu=$row['titlu'];
-	$localitate=$row['localitate'];
-	$data=$row['data_form'];
-	$detalii=$row['detalii'];
-	$user=$row['user_id'];
-	$id=$row['id'];
-	echo $id;
-	echo $tip;
-	echo $titlu;
-	echo $detalii;
-
-	$q="INSERT INTO addTable (id,tip,titlu,localitate,data_form,detalii,user_id)
-				VALUES ('$id','$tip','$titlu','$localitate','$data','$detalii','$user')";
-			mysqli_query($db,$q);
-	$q1="DELETE FROM perms where id='$id'";
-	mysqli_query($db,$q);
-}
+//like
+if(isset($_POST['like'])){
+		$i =  $_POST['idhidd'];
+		$sql = "UPDATE addtable SET likes = likes + 1 WHERE id = $i"; 
+		mysqli_query($db,$sql);
+		$page = $_SERVER['PHP_SELF'];
+		echo '<meta http-equiv="Refresh" content="0;' . $page . '">';
+	}

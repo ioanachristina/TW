@@ -7,7 +7,7 @@
 
 <link rel="stylesheet" type="text/css" href="baranav+body.css">
 <link rel="stylesheet" type="text/css" href="header1.css">
-<link rel="stylesheet" type="text/css" href="indeex1.css">
+<link rel="stylesheet" type="text/css" href="index.css">
 
 </head>
 
@@ -34,40 +34,167 @@
 </div>
 
 <div id="Main">
+<h2 class="newTitle">Cele mai recente evenimente&ensp;
+         <span style="font-weight:normal;">
+                <font face="Roboto" size="4" onclick="showFiltering()">
+                    <img src="filter-icon.svg" alt="Filter icon" width="20" height="20"> FILTREAZĂ</font></span></h2>
 
- <h2 class="newTitle">Cele mai recente evenimente</h2>
+ <form id="filter-panel" method = "POST">
+    <div class="FilterBox">
+			<p><span style="float:center">Rating:
+         <select name="rating">
+			<option value=""></option>
+                <option value="asc">Crescator</option>
+                <option value="desc">Descrescator</option>
+            </select>
+        </span>
+        <p><span style="float:center">Localitate:
+		<select name="localitate">
+		<option value=""></option>
+		<?php
+			$q = "Select DISTINCT localitate from addtable ";
+			$r = mysqli_query($db,$q);
+			while($row = mysqli_fetch_array($r,MYSQLI_ASSOC)){
+				$loc = $row['localitate'];
+				echo "<option value='$loc'>$loc</option>";
+			}
+		?>
+		</select>
+        </span>
 
-  <?php
-	$sqlget = "SELECT * FROM addtable order by data_form desc";
+        <!-- &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; -->
+
+        <span style="float:right">Data:
+            <select name="data">
+			<option value=""></option>
+                <option value="asc">Crescator</option>
+                <option value="desc">Descrescator</option>
+            </select>
+        </span>
+        </p>
+		<span style="float:right"> <input type='submit' name='filter' value = "Filtreaza" /> </center></span>
+    </div>
+</form>
+
+<p id="p1"></p>
+
+<script>
+var ok = 0;
+
+function showFiltering() {
+
+if(ok) {
+    document.getElementById("filter-panel").style.display = "none";
+
+    document.getElementById("p1").innerHTML = "";
+
+    ok = 0;
+}
+
+else {
+    document.getElementById("filter-panel").style.display = "block";
+    document.getElementById("p1").innerHTML = "<br><br><br><br><br><br><br><br>";
+    ok = 1;
+    }
+}
+</script></h2>
+
+<?php
+ $where = "";
+  if(isset($_POST['filter'])){
+		$rating = mysqli_real_escape_string($db,$_POST['rating']);
+		$loc = mysqli_real_escape_string($db,$_POST['localitate']);
+		$data = mysqli_real_escape_string($db,$_POST['data']);
+		if($rating != "" && $loc != ""  && $data != ""){
+			$where = "where localitate = '$loc' order by likes $rating,data_form $data";
+		}
+		if($rating != "" && $loc != "" &&$data == ""){
+			$where = "where localitate = '$loc' order by likes $rating";
+		}
+		if($rating != "" && $loc == "" &&$data != ""){
+			$where = "order by likes $rating , data_form $data";
+		}
+		if($rating == "" && $loc != "" &&$data != ""){
+			$where = "where localitate='$loc' order by data_form $data";
+		}
+		if($rating != "" && $loc == "" &&$data == ""){
+			$where = " order by likes $rating";
+		}
+		if($rating == "" && $loc != "" &&$data == ""){
+			$where = "where localitate='$loc'";
+		}
+		if($rating == "" && $loc == "" &&$data != ""){
+			$where = "order by data_form $data";
+		}
+		$sqlget = "SELECT * FROM addtable $where";
 	$sqldata = mysqli_query($db, $sqlget) or die ('error getting infos');
-	
-	
-	
 	while($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)){
-		echo '<div class="EventBox">';
+		$ida = $row['id'];
+		echo "<form method='POST' action='index1.php'>";
+		echo "<div class='EventBox'>";
 		echo "<h2>";
 		echo $row['titlu'];
 		echo "</h2>";
-		echo "<p>Tipul evenimentului: ";
+		echo "<p>Tipul evenimentului : ";
 		echo $row['tip'];
 		echo "</p>";
-		echo "<p>Localitatea: ";
+		echo "<p>Localitatea : ";
 		echo $row['localitate'];
 		echo "</p>";
-		echo "<p>Data :";
+		echo "<p>Data : ";
 		echo $row['data_form'];
 		echo "</p>";
 		echo "<p>Detalii : ";
 		echo $row['detalii'];
 		echo "</p>";
+		$q = "SELECT likes from addtable where id='$ida'";
+		$r=mysqli_query($db,$q);
+		$l=mysqli_fetch_array($r,MYSQLI_ASSOC);
 		echo "</div>";
+		echo "<input type='hidden' value='$ida' name='idhidd' />";
+		echo "</form>";
 	}
-?>	
+}
+	else{
+	$sqlget = "SELECT * FROM addtable";
+	$sqldata = mysqli_query($db, $sqlget) or die ('error getting infos');
+	
+	
+	while($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)){
+		$ida = $row['id'];
+		echo "<form method='POST' action='index1.php'>";
+		echo "<div class='EventBox'>";
+		echo "<h2>";
+		echo $row['titlu'];
+		echo "</h2>";
+		echo "<p>Tipul evenimentului : ";
+		echo $row['tip'];
+		echo "</p>";
+		echo "<p>Localitatea : ";
+		echo $row['localitate'];
+		echo "</p>";
+		echo "<p>Data : ";
+		echo $row['data_form'];
+		echo "</p>";
+		echo "<p>Detalii : ";
+		echo $row['detalii'];
+		echo "</p>";
+		$q = "SELECT likes from addtable where id='$ida'";
+		$r=mysqli_query($db,$q);
+		$l=mysqli_fetch_array($r,MYSQLI_ASSOC);
+		echo "</div>";
+		echo "<input type='hidden' value='$ida' name='idhidd' />";
+		echo "</form>";
+	}
+	}
+?>		
 
 
   </div>
 
 </div>
+
+
 
 </body>
 

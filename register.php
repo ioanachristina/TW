@@ -5,7 +5,7 @@
 <head>
 <title>CityZen</title>
 
-<link rel="stylesheet" type="text/css" href="register1.css">
+<link rel="stylesheet" type="text/css" href="register.css">
 <link rel="stylesheet" type="text/css" href="baranav+body.css">
 <link rel="stylesheet" type="text/css" href="header1.css">
 

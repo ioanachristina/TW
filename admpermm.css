@@ -1,0 +1,109 @@
+.but{
+    background: #8797E5;
+	color: #fff;
+	border: 1px solid #eee;
+	border-radius: 20px;
+	box-shadow: 5px 5px 5px #eee;
+	text-shadow:none;
+	height: 5%;
+    width: 100%;
+	text-align: center;
+	cursor: pointer;
+}
+#Main
+{
+	font-family: Arial, Helvetica, sans-serif;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0 auto;
+	min-height: 500px;
+}
+
+.img{
+	width : 20px;
+	height : 20px;
+}
+.but:hover{
+    background: rgb(156, 84, 238);	
+	color: #fff;
+	border: 1px solid #eee;
+	border-radius: 20px;
+	box-shadow: 5px 5px 5px #eee;
+    text-shadow:none;
+	cursor: pointer;
+}
+.but{
+	float:left;
+	margin-left: 43%;
+	width: 15%;
+	margin-top:1%;
+}
+body{
+	padding: 0px;
+	margin: 0px;
+}
+
+#roles {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 60%;
+  text-align: center;
+  margin : auto;
+  margin-top : 5%;
+  background-color:#C9C6C6;
+}
+#roles td, #roles th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#roles tr:hover {background-color: gray;}
+
+#roles th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #8797E5;
+  color: white;
+}
+.select{
+	background-color: #E9E9E9;
+	width: 70%;
+	box-shadow: 2px 2px 2px #eee;
+}
+
+.data-collection {display:block; width:width:100%; border-collapse:collapse; table-layout:auto; vertical-align:top; margin-bottom:15px; border:1px solid #CCCCCC;}
+.data-collection div {display:table-row;}
+.data-collection div:nth-child(1) {color:#FFFFFF; background-color:#666666; border:1px solid #CCCCCC; border-collapse:collapse; text-align:center; table-layout:auto; vertical-align:middle; font-weight:bold;}
+
+.data-collection div:nth-child(2n+2){color:#666666; background-color:#F7F7F7;}
+.data-collection div:nth-child(2n+3){color:#666666; background-color:#E8E8E8;}
+.data-collection div span {display:table-cell; padding:5px; border-collapse:collapse;}
+.data-collection div span:nth-child(1){width:30%;}
+.data-collection div span:nth-child(2){width:70%;}
+
+::-webkit-input-placeholder{color: #B0B0B0;}
+::-moz-placeholder{color: #B0B0B0;}
+:-ms-input-placeholder{color: #B0B0B0;}
+:-moz-placeholder{color: #B0B0B0;}
+.Main{
+	margin-top : 30px;
+	margin-bottom : 30px;
+	margin-left : 20%;
+	float : left;
+}
+.but:hover{
+    background: rgb(156, 84, 238);	
+	color: #fff;
+	border: 1px solid #eee;
+	border-radius: 20px;
+	box-shadow: 5px 5px 5px #eee;
+    text-shadow:none;
+	cursor: pointer;
+}
+.but{
+	float:left;
+	margin-left: 43%;
+	width: 15%;
+	margin-top:1%;
+}
