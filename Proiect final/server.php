@@ -153,3 +153,11 @@ if (isset($_POST['login_user'])) {
 	}
 }
 
+//like
+if(isset($_POST['like'])){
+		$i =  $_POST['idhidd'];
+		$sql = "UPDATE addtable SET likes = likes + 1 WHERE id = $i"; 
+		mysqli_query($db,$sql);
+		$page = $_SERVER['PHP_SELF'];
+		echo '<meta http-equiv="Refresh" content="0;' . $page . '">';
+	}

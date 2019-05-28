@@ -89,7 +89,7 @@ $user = $_SESSION['username'];
                 <font face="Roboto" size="4" onclick="showFiltering()">
                     <img src="filter-icon.svg" alt="Filter icon" width="20" height="20"> FILTREAZĂ</font></span></h2>
 
- <form id="filter-panel" method = "POST">
+ <form id="filter-panel" method = "GET">
     <div class="FilterBox">
 			<p><span style="float:center">Rating:
          <select name="rating">
@@ -150,10 +150,10 @@ else {
 </script></h2>
   <?php
   $where = "";
-  if(isset($_POST['filter'])){
-		$rating = mysqli_real_escape_string($db,$_POST['rating']);
-		$loc = mysqli_real_escape_string($db,$_POST['localitate']);
-		$data = mysqli_real_escape_string($db,$_POST['data']);
+  if(isset($_GET['filter'])){
+		$rating = mysqli_real_escape_string($db,$_GET['rating']);
+		$loc = mysqli_real_escape_string($db,$_GET['localitate']);
+		$data = mysqli_real_escape_string($db,$_GET['data']);
 		if($rating != "" && $loc != ""  && $data != ""){
 			$where = "and localitate = '$loc' order by likes $rating,data_form $data";
 		}
@@ -239,13 +239,7 @@ else {
 		echo "</form>";
 	}
 	}
-	if(isset($_POST['like'])){
-		$i =  $_POST['idhidd'];
-		$sql = "UPDATE addtable SET likes = likes + 1 WHERE id = $i"; 
-		mysqli_query($db,$sql);
-		$page = $_SERVER['PHP_SELF'];
-		echo '<meta http-equiv="Refresh" content="0;' . $page . '">';
-	}
+
 
 ?>	
 </div>
