@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg height="987" version="1.1" width="1309" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#c8ffff" height="122" stroke="#c8ffff" stroke-width="1" width="93" x="62" y="32"/>
+<rect fill="none" height="122" stroke="#000000" stroke-width="1" width="93" x="62" y="32"/>
+<text font-family="Dialog" font-size="12" x="73" y="46">
+Bază de date</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="93" x="62" y="56"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="93" x="62" y="77"/>
+<text font-family="Dialog" font-size="12" x="66" y="92">
+Select() : void</text>
+<text font-family="Dialog" font-size="12" x="66" y="109">
+Update() : void</text>
+<text font-family="Dialog" font-size="12" x="66" y="126">
+Insert() : void</text>
+<text font-family="Dialog" font-size="12" x="66" y="143">
+Delete() : void</text>
+<rect fill="#ffffc8" height="68" stroke="#ffffc8" stroke-width="1" width="166" x="30" y="360"/>
+<rect fill="none" height="68" stroke="#3c3cc8" stroke-width="1" width="166" x="30" y="360"/>
+<text font-family="Dialog" font-size="12" x="36" y="374">
+Serviciu logare / înregistrare</text>
+<rect fill="#3c3cc8" height="1" stroke="#3c3cc8" stroke-width="1" width="166" x="30" y="384"/>
+<rect fill="#3c3cc8" height="1" stroke="#3c3cc8" stroke-width="1" width="166" x="30" y="405"/>
+<rect fill="#ffafaf" height="143" stroke="#ffafaf" stroke-width="1" width="165" x="190" y="584"/>
+<rect fill="none" height="143" stroke="#000000" stroke-width="1" width="165" x="190" y="584"/>
+<text font-family="Dialog" font-size="12" x="257" y="598">
+Login</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="165" x="190" y="608"/>
+<text font-family="Dialog" font-size="12" x="194" y="623">
+Username : String</text>
+<text font-family="Dialog" font-size="12" x="194" y="640">
+Parolă : String</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="165" x="190" y="650"/>
+<text font-family="Dialog" font-size="12" x="194" y="665">
+Verificare_username() : bool</text>
+<text font-family="Dialog" font-size="12" x="194" y="682">
+Verificare_parolă() : bool</text>
+<text font-family="Dialog" font-size="12" x="194" y="699">
+Login() : void</text>
+<text font-family="Dialog" font-size="12" x="194" y="716">
+Ține_minte() : bool</text>
+<rect fill="#ffafaf" height="211" stroke="#ffafaf" stroke-width="1" width="158" x="14" y="520"/>
+<rect fill="none" height="211" stroke="#000000" stroke-width="1" width="158" x="14" y="520"/>
+<text font-family="Dialog" font-size="12" x="61" y="534">
+Înregistrare</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="158" x="14" y="544"/>
+<text font-family="Dialog" font-size="12" x="18" y="559">
+Username : String</text>
+<text font-family="Dialog" font-size="12" x="18" y="576">
+E-mail : String</text>
+<text font-family="Dialog" font-size="12" x="18" y="593">
+Parolă : String</text>
+<text font-family="Dialog" font-size="12" x="18" y="610">
+Confirmare_parolă : String</text>
+<text font-family="Dialog" font-size="12" x="18" y="627">
+Nume : String</text>
+<text font-family="Dialog" font-size="12" x="18" y="644">
+Prenume : String</text>
+<text font-family="Dialog" font-size="12" x="18" y="661">
+Localitate : String</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="158" x="14" y="671"/>
+<text font-family="Dialog" font-size="12" x="18" y="686">
+Preluare_valori() : void</text>
+<text font-family="Dialog" font-size="12" x="18" y="703">
+Verificare_valori() : bool</text>
+<text font-family="Dialog" font-size="12" x="18" y="720">
+Inserare_valori() : void</text>
+<polyline fill="none" points="94,428 94,520" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="94,428 99,438 94,448 89,438" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="94,428 99,438 94,448 89,438" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="190,428 190,584" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="190,428 195,438 190,448 185,438" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="190,428 195,438 190,448 185,438" stroke="#000000" stroke-width="1"/>
+<rect fill="#ffafaf" height="71" stroke="#ffafaf" stroke-width="1" width="116" x="302" y="480"/>
+<rect fill="none" height="71" stroke="#000000" stroke-width="1" width="116" x="302" y="480"/>
+<text font-family="Dialog" font-size="12" x="308" y="494">
+Recuperare parolă</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="116" x="302" y="504"/>
+<text font-family="Dialog" font-size="12" x="306" y="519">
+E-mail : String</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="116" x="302" y="529"/>
+<polyline fill="none" points="196,428 302,480" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="196,428 207,427 213,436 202,436" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="196,428 207,427 213,436 202,436" stroke="#000000" stroke-width="1"/>
+<rect fill="#c8c8ff" height="109" stroke="#c8c8ff" stroke-width="1" width="154" x="558" y="440"/>
+<rect fill="none" height="109" stroke="#000000" stroke-width="1" width="154" x="558" y="440"/>
+<text font-family="Dialog" font-size="12" x="611" y="454">
+Utilizator</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="154" x="558" y="464"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="154" x="558" y="487"/>
+<text font-family="Dialog" font-size="12" x="562" y="502">
+Înregistrare() : void</text>
+<text font-family="Dialog" font-size="12" x="562" y="519">
+Logare() : void</text>
+<text font-family="Dialog" font-size="12" x="562" y="536">
+Recuperare_parolă() : void</text>
+<rect fill="#ffc8ff" height="68" stroke="#ffc8ff" stroke-width="1" width="91" x="950" y="792"/>
+<rect fill="none" height="68" stroke="#000000" stroke-width="1" width="91" x="950" y="792"/>
+<text font-family="Dialog" font-size="12" x="959" y="806">
+Administrator</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="91" x="950" y="816"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="91" x="950" y="837"/>
+<rect fill="#ffc8ff" height="68" stroke="#ffc8ff" stroke-width="1" width="118" x="526" y="760"/>
+<rect fill="none" height="68" stroke="#000000" stroke-width="1" width="118" x="526" y="760"/>
+<text font-family="Dialog" font-size="12" x="538" y="774">
+Utilizator obișnuit</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="118" x="526" y="784"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="118" x="526" y="805"/>
+<rect fill="#ffc8ff" height="68" stroke="#ffc8ff" stroke-width="1" width="70" x="694" y="760"/>
+<rect fill="none" height="68" stroke="#000000" stroke-width="1" width="70" x="694" y="760"/>
+<text font-family="Dialog" font-size="12" x="700" y="774">
+Superuser</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="70" x="694" y="784"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="70" x="694" y="805"/>
+<polyline fill="none" points="950,792 734,656 694,560 694,549" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="694,549 701,561 687,561" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="694,549 701,561 687,561" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="566,760 566,549" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="566,549 573,561 559,561" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="566,549 573,561 559,561" stroke="#000000" stroke-width="1"/>
+<rect fill="#c8ffc8" height="160" stroke="#c8ffc8" stroke-width="1" width="169" x="534" y="32"/>
+<rect fill="none" height="160" stroke="#000000" stroke-width="1" width="169" x="534" y="32"/>
+<text font-family="Dialog" font-size="12" x="586" y="46">
+Evenimente</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="169" x="534" y="56"/>
+<text font-family="Dialog" font-size="12" x="538" y="71">
+Tip : String</text>
+<text font-family="Dialog" font-size="12" x="538" y="88">
+Localitate : String</text>
+<text font-family="Dialog" font-size="12" x="538" y="105">
+Data : String</text>
+<text font-family="Dialog" font-size="12" x="538" y="122">
+Detalii : String</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="169" x="534" y="132"/>
+<text font-family="Dialog" font-size="12" x="538" y="147">
+Căutare_eveniment() : void</text>
+<text font-family="Dialog" font-size="12" x="538" y="164">
+Adăugare_comentariu() : void</text>
+<text font-family="Dialog" font-size="12" x="538" y="181">
+Ștergere_comentariu() : void</text>
+<rect fill="#c8ffc8" height="122" stroke="#c8ffc8" stroke-width="1" width="126" x="798" y="16"/>
+<rect fill="none" height="122" stroke="#000000" stroke-width="1" width="126" x="798" y="16"/>
+<text font-family="Dialog" font-size="12" x="806" y="30">
+Evenimente recente</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="126" x="798" y="40"/>
+<text font-family="Dialog" font-size="12" x="802" y="55">
+Tip : String</text>
+<text font-family="Dialog" font-size="12" x="802" y="72">
+Localitate : String</text>
+<text font-family="Dialog" font-size="12" x="802" y="89">
+Data : String</text>
+<text font-family="Dialog" font-size="12" x="802" y="106">
+Detalii : String</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="126" x="798" y="116"/>
+<polyline fill="none" points="703,48 798,48" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="703,48 713,43 723,48 713,53" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="703,48 713,43 723,48 713,53" stroke="#000000" stroke-width="1"/>
+<rect fill="#ffc8ff" height="68" stroke="#ffc8ff" stroke-width="1" width="111" x="326" y="248"/>
+<rect fill="none" height="68" stroke="#000000" stroke-width="1" width="111" x="326" y="248"/>
+<text font-family="Dialog" font-size="12" x="333" y="262">
+Dezastre naturale</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="111" x="326" y="272"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="111" x="326" y="293"/>
+<rect fill="#ffc8ff" height="68" stroke="#ffc8ff" stroke-width="1" width="66" x="534" y="336"/>
+<rect fill="none" height="68" stroke="#000000" stroke-width="1" width="66" x="534" y="336"/>
+<text font-family="Dialog" font-size="12" x="546" y="350">
+Blocaje</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="66" x="534" y="360"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="66" x="534" y="381"/>
+<rect fill="#ffc8ff" height="68" stroke="#ffc8ff" stroke-width="1" width="67" x="742" y="272"/>
+<rect fill="none" height="68" stroke="#000000" stroke-width="1" width="67" x="742" y="272"/>
+<text font-family="Dialog" font-size="12" x="749" y="286">
+Accidente</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="67" x="742" y="296"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="67" x="742" y="317"/>
+<rect fill="#ffc8ff" height="68" stroke="#ffc8ff" stroke-width="1" width="114" x="470" y="248"/>
+<rect fill="none" height="68" stroke="#000000" stroke-width="1" width="114" x="470" y="248"/>
+<text font-family="Dialog" font-size="12" x="477" y="262">
+Acte de vandalism</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="114" x="470" y="272"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="114" x="470" y="293"/>
+<polyline fill="none" points="742,272 703,192" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="703,192 714,199 701,205" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="703,192 714,199 701,205" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="600,336 600,192" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="600,192 607,204 593,204" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="600,192 607,204 593,204" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="568,248 568,192" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="568,192 575,204 561,204" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="568,192 575,204 561,204" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="437,248 534,192" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="534,192 527,204 520,191" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="534,192 527,204 520,191" stroke="#000000" stroke-width="1"/>
+<rect fill="#c8ffc8" height="177" stroke="#c8ffc8" stroke-width="1" width="110" x="390" y="584"/>
+<rect fill="none" height="177" stroke="#000000" stroke-width="1" width="110" x="390" y="584"/>
+<text font-family="Dialog" font-size="12" x="431" y="598">
+Profil</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="110" x="390" y="608"/>
+<text font-family="Dialog" font-size="12" x="394" y="623">
+Username : String</text>
+<text font-family="Dialog" font-size="12" x="394" y="640">
+Nume : String</text>
+<text font-family="Dialog" font-size="12" x="394" y="657">
+Prenume : String</text>
+<text font-family="Dialog" font-size="12" x="394" y="674">
+E-mail : String</text>
+<text font-family="Dialog" font-size="12" x="394" y="691">
+Localitate : String</text>
+<text font-family="Dialog" font-size="12" x="394" y="708">
+Rang : String</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="110" x="390" y="728"/>
+<polyline fill="none" points="558,549 500,584" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="558,549 552,558 541,559 546,549" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="558,549 552,558 541,559 546,549" stroke="#000000" stroke-width="1"/>
+<rect fill="#ffafaf" height="143" stroke="#ffafaf" stroke-width="1" width="134" x="822" y="264"/>
+<rect fill="none" height="143" stroke="#000000" stroke-width="1" width="134" x="822" y="264"/>
+<text font-family="Dialog" font-size="12" x="832" y="278">
+Adăugare eveniment</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="134" x="822" y="288"/>
+<text font-family="Dialog" font-size="12" x="826" y="303">
+Tip : String</text>
+<text font-family="Dialog" font-size="12" x="826" y="320">
+Localitate : String</text>
+<text font-family="Dialog" font-size="12" x="826" y="337">
+Data : String</text>
+<text font-family="Dialog" font-size="12" x="826" y="354">
+Detalii : String</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="134" x="822" y="364"/>
+<text font-family="Dialog" font-size="12" x="826" y="379">
+Preluare_valori() : void</text>
+<text font-family="Dialog" font-size="12" x="826" y="396">
+Inserare_valori() : void</text>
+<polyline fill="none" points="703,192 822,264" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="703,192 714,192 720,202 708,201" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="703,192 714,192 720,202 708,201" stroke="#000000" stroke-width="1"/>
+<rect fill="#ffc8ff" height="68" stroke="#ffc8ff" stroke-width="1" width="108" x="1174" y="384"/>
+<rect fill="none" height="68" stroke="#000000" stroke-width="1" width="108" x="1174" y="384"/>
+<text font-family="Dialog" font-size="12" x="1183" y="398">
+Utilizator special</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="108" x="1174" y="408"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="108" x="1174" y="429"/>
+<polyline fill="none" points="62,88 22,88 22,136 62,136" stroke="#000000" stroke-width="1"/>
+<rect fill="#ffc800" height="68" stroke="#ffc800" stroke-width="1" width="67" x="86" y="240"/>
+<rect fill="none" height="68" stroke="#000000" stroke-width="1" width="67" x="86" y="240"/>
+<text font-family="Dialog" font-size="12" x="92" y="254">
+Controller</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="67" x="86" y="264"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="67" x="86" y="285"/>
+<polyline fill="none" points="118,154 118,240" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="118,154 123,164 118,174 113,164" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="118,154 123,164 118,174 113,164" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="126,308 126,360" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="126,308 131,318 126,328 121,318" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="126,308 131,318 126,328 121,318" stroke="#000000" stroke-width="1"/>
+<rect fill="#ffffc8" height="68" stroke="#ffffc8" stroke-width="1" width="182" x="222" y="128"/>
+<rect fill="none" height="68" stroke="#000000" stroke-width="1" width="182" x="222" y="128"/>
+<text font-family="Dialog" font-size="12" x="227" y="142">
+Serviciu gestionare evenimente</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="182" x="222" y="152"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="182" x="222" y="173"/>
+<polyline fill="none" points="153,240 222,196" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="153,240 158,230 170,230 164,238" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="153,240 158,230 170,230 164,238" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="404,128 534,128" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="404,128 414,123 424,128 414,133" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="404,128 414,123 424,128 414,133" stroke="#000000" stroke-width="1"/>
+<rect fill="#ffffc8" height="68" stroke="#ffffc8" stroke-width="1" width="166" x="270" y="344"/>
+<rect fill="none" height="68" stroke="#000000" stroke-width="1" width="166" x="270" y="344"/>
+<text font-family="Dialog" font-size="12" x="275" y="358">
+Serviciu gestionare utilizatori</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="166" x="270" y="368"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="166" x="270" y="389"/>
+<polyline fill="none" points="153,308 270,344" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="153,308 164,306 172,313 161,315" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="153,308 164,306 172,313 161,315" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="436,376 478,376 558,440" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="436,376 446,371 456,376 446,381" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="436,376 446,371 456,376 446,381" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="694,760 598,560 598,549" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="598,549 605,561 591,561" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="598,549 605,561 591,561" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="822,407 712,440" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="822,407 813,414 803,412 810,405" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="822,407 813,414 803,412 810,405" stroke="#000000" stroke-width="1"/>
+<rect fill="#ffafaf" height="75" stroke="#ffafaf" stroke-width="1" width="147" x="958" y="128"/>
+<rect fill="none" height="75" stroke="#000000" stroke-width="1" width="147" x="958" y="128"/>
+<text font-family="Dialog" font-size="12" x="975" y="142">
+Eliminare eveniment</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="147" x="958" y="152"/>
+<text font-family="Dialog" font-size="12" x="962" y="167">
+Motivul_eliminării : String</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="147" x="958" y="177"/>
+<text font-family="Dialog" font-size="12" x="962" y="192">
+Inserare_motiv() : void</text>
+<polyline fill="none" points="703,160 958,160" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="703,160 713,155 723,160 713,165" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="703,160 713,155 723,160 713,165" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="1041,203 1041,792" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="1041,203 1046,213 1041,223 1036,213" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="1041,203 1046,213 1041,223 1036,213" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="196,428 558,440" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="196,428 206,423 216,428 205,433" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="196,428 206,423 216,428 205,433" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="1174,452 712,452" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="712,452 724,445 724,459" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="712,452 724,445 724,459" stroke="#000000" stroke-width="1"/>
+<rect fill="#ffafaf" height="68" stroke="#ffafaf" stroke-width="1" width="119" x="1078" y="256"/>
+<rect fill="none" height="68" stroke="#000000" stroke-width="1" width="119" x="1078" y="256"/>
+<text font-family="Dialog" font-size="12" x="1083" y="270">
+Asignare eveniment</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="119" x="1078" y="280"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="119" x="1078" y="301"/>
+<polyline fill="none" points="703,192 1078,256" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="703,192 713,188 722,195 712,198" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="703,192 713,188 722,195 712,198" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="1174,324 1174,384" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="1174,324 1179,334 1174,344 1169,334" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="1174,324 1179,334 1174,344 1169,334" stroke="#000000" stroke-width="1"/>
+<rect fill="#ffafaf" height="68" stroke="#ffafaf" stroke-width="1" width="118" x="1102" y="608"/>
+<rect fill="none" height="68" stroke="#000000" stroke-width="1" width="118" x="1102" y="608"/>
+<text font-family="Dialog" font-size="12" x="1107" y="622">
+Promovare utilizator</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="118" x="1102" y="632"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="118" x="1102" y="653"/>
+<rect fill="#ffafaf" height="68" stroke="#ffafaf" stroke-width="1" width="131" x="846" y="480"/>
+<rect fill="none" height="68" stroke="#000000" stroke-width="1" width="131" x="846" y="480"/>
+<text font-family="Dialog" font-size="12" x="851" y="494">
+Retrogradare utilizator</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="131" x="846" y="504"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="131" x="846" y="525"/>
+<rect fill="#ffafaf" height="68" stroke="#ffafaf" stroke-width="1" width="105" x="1190" y="736"/>
+<rect fill="none" height="68" stroke="#000000" stroke-width="1" width="105" x="1190" y="736"/>
+<text font-family="Dialog" font-size="12" x="1195" y="750">
+Ștergere utilizator</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="105" x="1190" y="760"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="105" x="1190" y="781"/>
+<polyline fill="none" points="712,488 846,488" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="712,488 722,483 732,488 722,493" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="712,488 722,483 732,488 722,493" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="712,536 726,536 1102,608" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="712,536 722,531 732,536 722,541" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="712,536 722,531 732,536 722,541" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="712,549 1190,736" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="712,549 723,547 730,556 719,557" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="712,549 723,547 730,556 719,557" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="822,407 822,544 764,760" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="822,407 827,417 822,427 817,417" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="822,407 827,417 822,427 817,417" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="950,548 950,792" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="950,548 955,558 950,568 945,558" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="950,548 955,558 950,568 945,558" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="1014,203 1014,552 764,760" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="1014,203 1019,213 1014,223 1009,213" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="1014,203 1019,213 1014,223 1009,213" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="1126,676 1126,688 1041,792" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="1126,676 1131,686 1126,696 1121,686" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="1126,676 1131,686 1126,696 1121,686" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="1190,792 1041,792" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="1190,792 1180,797 1170,792 1180,787" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="1190,792 1180,797 1170,792 1180,787" stroke="#000000" stroke-width="1"/>
+<rect fill="#ffc8ff" height="68" stroke="#ffc8ff" stroke-width="1" width="112" x="614" y="288"/>
+<rect fill="none" height="68" stroke="#000000" stroke-width="1" width="112" x="614" y="288"/>
+<text font-family="Dialog" font-size="12" x="619" y="302">
+Aparitia cersetoriei</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="112" x="614" y="312"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="112" x="614" y="333"/>
+<polyline fill="none" points="654,288 654,192" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="654,192 661,204 647,204" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="654,192 661,204 647,204" stroke="#000000" stroke-width="1"/>
+<rect fill="#ffc8c8" height="68" stroke="#ffc8c8" stroke-width="1" width="79" x="790" y="872"/>
+<rect fill="none" height="68" stroke="#000000" stroke-width="1" width="79" x="790" y="872"/>
+<text font-family="Dialog" font-size="12" x="795" y="886">
+Editare profil</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="79" x="790" y="896"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="79" x="790" y="917"/>
+<polyline fill="none" points="790,872 764,828" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="790,872 780,865 780,855 789,860" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="790,872 780,865 780,855 789,860" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="790,872 644,828" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="790,872 778,873 771,867 781,864" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="790,872 778,873 771,867 781,864" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="869,872 950,860" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="869,872 878,865 889,870 879,875" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="869,872 878,865 889,870 879,875" stroke="#000000" stroke-width="1"/>
+</svg>
