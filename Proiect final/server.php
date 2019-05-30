@@ -106,7 +106,6 @@ if (isset($_POST['login_user'])) {
   	}
   }
 	$_SESSION['succes']="V-ati logat cu succes";
-	$id = $r['user_id'];
 }		
 
 //ADAUGA ANUNT	
@@ -155,9 +154,34 @@ if (isset($_POST['login_user'])) {
 
 //like
 if(isset($_POST['like'])){
-		$i =  $_POST['idhidd'];
-		$sql = "UPDATE addtable SET likes = likes + 1 WHERE id = $i"; 
-		mysqli_query($db,$sql);
-		$page = $_SERVER['PHP_SELF'];
-		echo '<meta http-equiv="Refresh" content="0;' . $page . '">';
+		$ia =  $_POST['idhidd'];
+		$un = $_SESSION['username'];
+		$ok = 1;
+		$q1 = "select user_id from users where username='$un'";
+		$r = mysqli_query($db,$q1);
+		$r1 = mysqli_fetch_assoc($r);
+		$iu=$r1['user_id'];
+		$query = "SELECT * FROM rating where id_user=$iu";
+		$ras = mysqli_query($db,$query);
+		while($row = mysqli_fetch_assoc($ras)){
+			if($row['id_anunt'] == $ia){
+				$ok=0;
+			}
+		}
+		if($ok){
+			$qq = "Insert into rating values ( $iu,$ia,1)";
+			$qq1= "update addtable set likes =likes+1 where id = $ia";
+			mysqli_query($db,$qq);
+			mysqli_query($db,$qq1);
+			$page = $_SERVER['PHP_SELF'];
+			echo '<meta http-equiv="Refresh" content="0;' . $page . '">';
+		}
+		else{
+			$qq = "Delete from rating where id_user = $iu and id_anunt = $ia";
+			$qq1 = "Update addtable set likes = likes-1 where id=$ia";
+			mysqli_query($db,$qq);
+			mysqli_query($db,$qq1);
+			$page = $_SERVER['PHP_SELF'];
+			echo '<meta http-equiv="Refresh" content="0;' . $page . '">';
+		}
 	}

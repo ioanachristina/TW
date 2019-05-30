@@ -138,7 +138,7 @@ $user = $_SESSION['username'];
     $data=$row['data_form'];
     $detalii=$row['detalii'];
     $user=$row['user_id'];
-	$msg = "Anuntul tau a fost postat!";
+	$msg = "Anuntul tau din categoria $tip a fost postat!";
 
 	$q="INSERT INTO addtable (id, tip,titlu,localitate,data_form,detalii,user_id)
           VALUES ('$i','$tip','$titlu','$localitate','$data','$detalii','$user')";
@@ -154,9 +154,10 @@ $user = $_SESSION['username'];
     $query="SELECT * FROM perms where id='$i'";
     $rq=mysqli_query($db,$query);
     $row=mysqli_fetch_array($rq,MYSQLI_ASSOC);
+	$tip = $row['tip'];
 	$user=$row['user_id'];
 	$q="DELETE FROM perms where id='$i'";
-	$msg = "Anuntul tau a fost sters!";
+	$msg = "Anuntul tau din categoria $tip a fost sters!";
 	$q1 = "INSERT INTO notification (id_user,id_anunt,mesaj) values ($user,$i,'$msg')";
 	mysqli_query($db,$q1);
 	mysqli_query($db,$q);

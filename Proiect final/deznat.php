@@ -107,27 +107,33 @@ else {
 		$loc = mysqli_real_escape_string($db,$_GET['localitate']);
 		$data = mysqli_real_escape_string($db,$_GET['data']);
 		if($rating != "" && $loc != ""  && $data != ""){
-			$where = "and localitate = '$loc' order by likes $rating,data_form $data";
+			$sqlget = "select * from addtable 
+					where tip='dezastre_naturale' and localitate = '$loc' order by likes $rating , data_adaugare $data ";
 		}
-		if($rating != "" && $loc != "" &&$data == ""){
-			$where = "and localitate = '$loc' order by likes $rating";
+		else if($rating != "" && $loc != "" &&$data == ""){
+			$sqlget = "select * from addtable 
+					where tip='dezastre_naturale' and localitate = '$loc' order by likes $rating ";
 		}
-		if($rating != "" && $loc == "" &&$data != ""){
-			$where = "order by likes $rating , data_form $data";
+		else if($rating != "" && $loc == "" &&$data != ""){
+			$sqlget = "select * from addtable 
+					where tip='dezastre_naturale' order by likes $rating , data_adaugare $data ";
 		}
-		if($rating == "" && $loc != "" &&$data != ""){
-			$where = "and localitate='$loc' order by data_form $data";
+		else if($rating == "" && $loc != "" &&$data != ""){
+			$sqlget ="select * from addtable 
+					where tip='dezastre_naturale' and localitate = '$loc' order by data_adaugare $data ";
 		}
-		if($rating != "" && $loc == "" &&$data == ""){
-			$where = " order by likes $rating";
+		else if($rating != "" && $loc == "" &&$data == ""){
+			$sqlget = "select * from addtable 
+					where tip='dezastre_naturale' order by likes $rating ";
 		}
-		if($rating == "" && $loc != "" &&$data == ""){
-			$where = "and localitate='$loc'";
+		else if($rating == "" && $loc != "" &&$data == ""){
+			$sqlget = "select * from addtable 
+					where tip='dezastre_naturale' and localitate = '$loc' ";
 		}
-		if($rating == "" && $loc == "" &&$data != ""){
-			$where = "order by data_form $data";
+		else if($rating == "" && $loc == "" &&$data != ""){
+			$sqlget = "select * from addtable 
+					where tip='dezastre_naturale' order by data_adaugare $data";
 		}
-		$sqlget = "SELECT * FROM addtable where tip='dezastre_naturale' $where";
 	$sqldata = mysqli_query($db, $sqlget) or die ('error getting infos');
 	while($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)){
 		$ida = $row['id'];
@@ -148,9 +154,10 @@ else {
 		echo "<p>Detalii : ";
 		echo $row['detalii'];
 		echo "</p>";
-		$q = "SELECT likes from addtable where id='$ida'";
+		$q = "SELECT count(*) as cnt from rating where id_anunt='$ida'";
 		$r=mysqli_query($db,$q);
 		$l=mysqli_fetch_array($r,MYSQLI_ASSOC);
+		echo "<input type='button' class='like' name='like' value='Like(".$l['cnt'].")' disabled /> ";
 		echo "</div>";
 		echo "<input type='hidden' value='$ida' name='idhidd' />";
 		echo "</form>";
@@ -180,10 +187,11 @@ else {
 		echo "<p>Detalii : ";
 		echo $row['detalii'];
 		echo "</p>";
-		$q = "SELECT likes from addtable where id='$ida'";
+		$q = "SELECT count(*) as cnt from rating where id_anunt='$ida'";
 		$r=mysqli_query($db,$q);
 		$l=mysqli_fetch_array($r,MYSQLI_ASSOC);
-		echo "</div>";
+		echo "<input type='button' class='like' name='like' value='Like(".$l['cnt'].")' disabled /> ";
+		echo "</div>"
 		echo "<input type='hidden' value='$ida' name='idhidd' />";
 		echo "</form>";
 	}

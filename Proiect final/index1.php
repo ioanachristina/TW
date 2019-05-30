@@ -21,7 +21,7 @@
 
 <link rel="stylesheet" type="text/css" href="nav.css">
 <link rel="stylesheet" type="text/css" href="header1.css">
-<link rel="stylesheet" type="text/css" href="ind.css">
+<link rel="stylesheet" type="text/css" href="inn.css">
 
 </head>
 <body>
@@ -97,6 +97,7 @@ $user = $_SESSION['username'];
 
 <div id="Main">
 <h2 class="newTitle">Cele mai recente evenimente&ensp;
+<br><?php include('errors.php'); ?><Br>
          <span style="font-weight:normal;">
                 <font face="Roboto" size="4" onclick="showFiltering()">
                     <img src="filter-icon.svg" alt="Filter icon" width="20" height="20"> FILTREAZĂ</font></span></h2>
@@ -169,28 +170,34 @@ else {
 		$data = mysqli_real_escape_string($db,$_GET['data']);
 
 		if($rating != "" && $loc != ""  && $data != ""){
-			$where = "where localitate = '$loc' order by likes $rating,data_form $data";
+			$sqlget = "select * from addtable 
+					where localitate = '$loc' order by likes $rating , data_adaugare $data ";
 		}
-		if($rating != "" && $loc != "" &&$data == ""){
-			$where = "where localitate = '$loc' order by likes $rating";
+		else if($rating != "" && $loc != "" &&$data == ""){
+			$sqlget = "select * from addtable 
+					where localitate = '$loc' order by likes $rating ";
 		}
-		if($rating != "" && $loc == "" &&$data != ""){
-			$where = "order by likes $rating , data_form $data";
+		else if($rating != "" && $loc == "" &&$data != ""){
+			$sqlget = "select * from addtable 
+					order by likes $rating , data_adaugare $data ";
 		}
-		if($rating == "" && $loc != "" &&$data != ""){
-			$where = "where localitate='$loc' order by data_form $data";
+		else if($rating == "" && $loc != "" &&$data != ""){
+			$sqlget ="select * from addtable 
+					where localitate = '$loc' order by data_adaugare $data ";
 		}
-		if($rating != "" && $loc == "" &&$data == ""){
-			$where = " order by likes $rating";
+		else if($rating != "" && $loc == "" &&$data == ""){
+			$sqlget = "select * from addtable 
+					order by likes $rating ";
 		}
-		if($rating == "" && $loc != "" &&$data == ""){
-			$where = "where localitate='$loc'";
+		else if($rating == "" && $loc != "" &&$data == ""){
+			$sqlget = "select * from addtable 
+					where localitate = '$loc' ";
 		}
-		if($rating == "" && $loc == "" &&$data != ""){
-			$where = "order by data_form $data";
+		else if($rating == "" && $loc == "" &&$data != ""){
+			$sqlget = "select * from addtable 
+					order by data_adaugare $data";
 		}
 		
-		$sqlget = "SELECT * FROM addtable $where";
 	$sqldata = mysqli_query($db, $sqlget) or die ('error getting infos');
 	while($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)){
 		$ida = $row['id'];
@@ -211,10 +218,10 @@ else {
 		echo "<p>Detalii : ";
 		echo $row['detalii'];
 		echo "</p>";
-		$q = "SELECT likes from addtable where id='$ida'";
+		$q = "SELECT count(*) as cnt from rating where id_anunt='$ida'";
 		$r=mysqli_query($db,$q);
 		$l=mysqli_fetch_array($r,MYSQLI_ASSOC);
-		echo "<input type='submit' class='like' name='like' value='Like(".$l['likes'].")' /> ";
+		echo "<input type='submit' class='like' name='like' value='Like(".$l['cnt'].")' /> ";
 		echo "</div>";
 		echo "<input type='hidden' value='$ida' name='idhidd' />";
 		echo "</form>";
@@ -245,19 +252,16 @@ else {
 		echo "<p>Detalii : ";
 		echo $row['detalii'];
 		echo "</p>";
-		$q = "SELECT likes from addtable where id='$ida'";
+		$q = "SELECT count(*) as cnt from rating where id_anunt='$ida'";
 		$r=mysqli_query($db,$q);
 		$l=mysqli_fetch_array($r,MYSQLI_ASSOC);
-		echo "<input type='submit' class='like' name='like' value='Like(".$l['likes'].")' /> ";
+		echo "<input type='submit' class='like' name='like' value='Like(".$l['cnt'].")' /> ";
 		echo "</div>";
 		echo "<input type='hidden' value='$ida' name='idhidd' />";
 		echo "</form>";
 	}
 	}
 ?>	
-<?php 
-
-?>
 <?php
 	$q = "select user_id from users where username='".$_SESSION['username']."'";
 	$r = mysqli_query($db,$q);

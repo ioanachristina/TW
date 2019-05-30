@@ -6,9 +6,9 @@
 <title>CityZen</title>
 
 
-<link rel="stylesheet" type="text/css" href="nav.css">
+<link rel="stylesheet" type="text/css" href="naav.css">
 <link rel="stylesheet" type="text/css" href="header1.css">
-<link rel="stylesheet" type="text/css" href="add2.css">
+<link rel="stylesheet" type="text/css" href="add.css">
 
 </head>
 <body>

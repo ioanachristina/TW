@@ -6,7 +6,6 @@ form {
   background-size: 500px 400px !important;
   display : inline-block;
   margin-left : 20%;
-  position : fixed;
   
 }
 
@@ -14,7 +13,6 @@ form {
 .container {
   padding: 10px;
   background-color: #f1f1f1;
-  position : fixed;
   
 }
 /* Style the input elements and the submit button */
@@ -67,7 +65,7 @@ select#tip {
 body{
 	padding: 0px;
 	margin: 0px;
-	position : fixed;
+	position : relative;
 }
 .btn{
 	background-color: #4CAF50;
