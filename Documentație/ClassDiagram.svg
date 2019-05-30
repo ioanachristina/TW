@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg height="989" version="1.1" width="1296" xmlns="http://www.w3.org/2000/svg">
+<svg height="989" version="1.1" width="1194" xmlns="http://www.w3.org/2000/svg">
 <rect fill="#c8ffff" height="122" stroke="#c8ffff" stroke-width="1" width="93" x="62" y="32"/>
 <rect fill="none" height="122" stroke="#000000" stroke-width="1" width="93" x="62" y="32"/>
 <text font-family="Dialog" font-size="12" x="73" y="46">
@@ -116,8 +116,8 @@ Superuser</text>
 <polyline fill="none" points="580,728 580,549" stroke="#000000" stroke-width="1"/>
 <polygon fill="#ffffff" points="580,549 587,561 573,561" stroke="#ffffff" stroke-width="1"/>
 <polygon fill="none" points="580,549 587,561 573,561" stroke="#000000" stroke-width="1"/>
-<rect fill="#c8ffc8" height="160" stroke="#c8ffc8" stroke-width="1" width="169" x="534" y="32"/>
-<rect fill="none" height="160" stroke="#000000" stroke-width="1" width="169" x="534" y="32"/>
+<rect fill="#c8ffc8" height="184" stroke="#c8ffc8" stroke-width="1" width="169" x="534" y="32"/>
+<rect fill="none" height="184" stroke="#000000" stroke-width="1" width="169" x="534" y="32"/>
 <text font-family="Dialog" font-size="12" x="586" y="46">
 Evenimente</text>
 <rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="169" x="534" y="56"/>
@@ -129,18 +129,20 @@ Localitate : String</text>
 Data : String</text>
 <text font-family="Dialog" font-size="12" x="538" y="122">
 Detalii : String</text>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="169" x="534" y="132"/>
-<text font-family="Dialog" font-size="12" x="538" y="147">
+<text font-family="Dialog" font-size="12" x="538" y="139">
+Likes : Integer</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="169" x="534" y="152"/>
+<text font-family="Dialog" font-size="12" x="538" y="167">
 Căutare_eveniment() : void</text>
-<text font-family="Dialog" font-size="12" x="538" y="164">
-Adăugare_comentariu() : void</text>
-<text font-family="Dialog" font-size="12" x="538" y="181">
-Ștergere_comentariu() : void</text>
-<rect fill="#c8ffc8" height="122" stroke="#c8ffc8" stroke-width="1" width="126" x="798" y="16"/>
-<rect fill="none" height="122" stroke="#000000" stroke-width="1" width="126" x="798" y="16"/>
-<text font-family="Dialog" font-size="12" x="806" y="30">
+<text font-family="Dialog" font-size="12" x="538" y="184">
+Adăugare_like() : void</text>
+<text font-family="Dialog" font-size="12" x="538" y="201">
+Ștergere_like() : void</text>
+<rect fill="#c8ffc8" height="139" stroke="#c8ffc8" stroke-width="1" width="120" x="798" y="16"/>
+<rect fill="none" height="139" stroke="#000000" stroke-width="1" width="120" x="798" y="16"/>
+<text font-family="Dialog" font-size="12" x="803" y="30">
 Evenimente recente</text>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="126" x="798" y="40"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="120" x="798" y="40"/>
 <text font-family="Dialog" font-size="12" x="802" y="55">
 Tip : String</text>
 <text font-family="Dialog" font-size="12" x="802" y="72">
@@ -149,7 +151,9 @@ Localitate : String</text>
 Data : String</text>
 <text font-family="Dialog" font-size="12" x="802" y="106">
 Detalii : String</text>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="126" x="798" y="116"/>
+<text font-family="Dialog" font-size="12" x="802" y="123">
+Likes : Integer</text>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="120" x="798" y="133"/>
 <polyline fill="none" points="703,48 798,48" stroke="#000000" stroke-width="1"/>
 <polygon fill="#000000" points="703,48 713,43 723,48 713,53" stroke="#000000" stroke-width="1"/>
 <polygon fill="none" points="703,48 713,43 723,48 713,53" stroke="#000000" stroke-width="1"/>
@@ -177,18 +181,18 @@ Accidente</text>
 Acte de vandalism</text>
 <rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="114" x="470" y="272"/>
 <rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="114" x="470" y="293"/>
-<polyline fill="none" points="742,272 703,192" stroke="#000000" stroke-width="1"/>
-<polygon fill="#ffffff" points="703,192 714,199 701,205" stroke="#ffffff" stroke-width="1"/>
-<polygon fill="none" points="703,192 714,199 701,205" stroke="#000000" stroke-width="1"/>
-<polyline fill="none" points="600,336 600,192" stroke="#000000" stroke-width="1"/>
-<polygon fill="#ffffff" points="600,192 607,204 593,204" stroke="#ffffff" stroke-width="1"/>
-<polygon fill="none" points="600,192 607,204 593,204" stroke="#000000" stroke-width="1"/>
-<polyline fill="none" points="568,248 568,192" stroke="#000000" stroke-width="1"/>
-<polygon fill="#ffffff" points="568,192 575,204 561,204" stroke="#ffffff" stroke-width="1"/>
-<polygon fill="none" points="568,192 575,204 561,204" stroke="#000000" stroke-width="1"/>
-<polyline fill="none" points="437,248 534,192" stroke="#000000" stroke-width="1"/>
-<polygon fill="#ffffff" points="534,192 527,204 520,191" stroke="#ffffff" stroke-width="1"/>
-<polygon fill="none" points="534,192 527,204 520,191" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="742,272 703,216" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="703,216 715,221 704,229" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="703,216 715,221 704,229" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="600,336 600,216" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="600,216 607,228 593,228" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="600,216 607,228 593,228" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="568,248 568,216" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="568,216 575,228 561,228" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="568,216 575,228 561,228" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="437,248 534,216" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="534,216 524,226 520,213" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="534,216 524,226 520,213" stroke="#000000" stroke-width="1"/>
 <rect fill="#c8ffc8" height="177" stroke="#c8ffc8" stroke-width="1" width="110" x="390" y="584"/>
 <rect fill="none" height="177" stroke="#000000" stroke-width="1" width="110" x="390" y="584"/>
 <text font-family="Dialog" font-size="12" x="431" y="598">
@@ -228,15 +232,9 @@ Detalii : String</text>
 Preluare_valori() : void</text>
 <text font-family="Dialog" font-size="12" x="826" y="396">
 Inserare_valori() : void</text>
-<polyline fill="none" points="703,192 822,264" stroke="#000000" stroke-width="1"/>
-<polygon fill="#000000" points="703,192 714,192 720,202 708,201" stroke="#000000" stroke-width="1"/>
-<polygon fill="none" points="703,192 714,192 720,202 708,201" stroke="#000000" stroke-width="1"/>
-<rect fill="#ffc8ff" height="68" stroke="#ffc8ff" stroke-width="1" width="108" x="1174" y="384"/>
-<rect fill="none" height="68" stroke="#000000" stroke-width="1" width="108" x="1174" y="384"/>
-<text font-family="Dialog" font-size="12" x="1183" y="398">
-Utilizator special</text>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="108" x="1174" y="408"/>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="108" x="1174" y="429"/>
+<polyline fill="none" points="703,216 822,264" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="703,216 714,215 721,223 710,224" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="703,216 714,215 721,223 710,224" stroke="#000000" stroke-width="1"/>
 <polyline fill="none" points="62,88 22,88 22,136 62,136" stroke="#000000" stroke-width="1"/>
 <rect fill="#ffc800" height="68" stroke="#ffc800" stroke-width="1" width="67" x="86" y="240"/>
 <rect fill="none" height="68" stroke="#000000" stroke-width="1" width="67" x="86" y="240"/>
@@ -295,27 +293,12 @@ Acceptare / Eliminare eveniment</text>
 <polyline fill="none" points="196,428 558,440" stroke="#000000" stroke-width="1"/>
 <polygon fill="#000000" points="196,428 206,423 216,428 205,433" stroke="#000000" stroke-width="1"/>
 <polygon fill="none" points="196,428 206,423 216,428 205,433" stroke="#000000" stroke-width="1"/>
-<polyline fill="none" points="1174,452 712,452" stroke="#000000" stroke-width="1"/>
-<polygon fill="#ffffff" points="712,452 724,445 724,459" stroke="#ffffff" stroke-width="1"/>
-<polygon fill="none" points="712,452 724,445 724,459" stroke="#000000" stroke-width="1"/>
-<rect fill="#ffafaf" height="68" stroke="#ffafaf" stroke-width="1" width="119" x="1078" y="256"/>
-<rect fill="none" height="68" stroke="#000000" stroke-width="1" width="119" x="1078" y="256"/>
-<text font-family="Dialog" font-size="12" x="1083" y="270">
-Asignare eveniment</text>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="119" x="1078" y="280"/>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="119" x="1078" y="301"/>
-<polyline fill="none" points="703,192 1078,256" stroke="#000000" stroke-width="1"/>
-<polygon fill="#000000" points="703,192 713,188 722,195 712,198" stroke="#000000" stroke-width="1"/>
-<polygon fill="none" points="703,192 713,188 722,195 712,198" stroke="#000000" stroke-width="1"/>
-<polyline fill="none" points="1174,324 1174,384" stroke="#000000" stroke-width="1"/>
-<polygon fill="#000000" points="1174,324 1179,334 1174,344 1169,334" stroke="#000000" stroke-width="1"/>
-<polygon fill="none" points="1174,324 1179,334 1174,344 1169,334" stroke="#000000" stroke-width="1"/>
-<rect fill="#ffafaf" height="68" stroke="#ffafaf" stroke-width="1" width="118" x="1102" y="608"/>
-<rect fill="none" height="68" stroke="#000000" stroke-width="1" width="118" x="1102" y="608"/>
-<text font-family="Dialog" font-size="12" x="1107" y="622">
+<rect fill="#ffafaf" height="68" stroke="#ffafaf" stroke-width="1" width="118" x="1062" y="576"/>
+<rect fill="none" height="68" stroke="#000000" stroke-width="1" width="118" x="1062" y="576"/>
+<text font-family="Dialog" font-size="12" x="1067" y="590">
 Promovare utilizator</text>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="118" x="1102" y="632"/>
-<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="118" x="1102" y="653"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="118" x="1062" y="600"/>
+<rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="118" x="1062" y="621"/>
 <rect fill="#ffafaf" height="68" stroke="#ffafaf" stroke-width="1" width="131" x="814" y="472"/>
 <rect fill="none" height="68" stroke="#000000" stroke-width="1" width="131" x="814" y="472"/>
 <text font-family="Dialog" font-size="12" x="819" y="486">
@@ -325,9 +308,9 @@ Retrogradare utilizator</text>
 <polyline fill="none" points="712,488 814,488" stroke="#000000" stroke-width="1"/>
 <polygon fill="#000000" points="712,488 722,483 732,488 722,493" stroke="#000000" stroke-width="1"/>
 <polygon fill="none" points="712,488 722,483 732,488 722,493" stroke="#000000" stroke-width="1"/>
-<polyline fill="none" points="712,536 726,536 1102,608" stroke="#000000" stroke-width="1"/>
-<polygon fill="#000000" points="712,536 722,531 732,536 722,541" stroke="#000000" stroke-width="1"/>
-<polygon fill="none" points="712,536 722,531 732,536 722,541" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="712,549 1062,576" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="712,549 722,544 731,550 721,554" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="712,549 722,544 731,550 721,554" stroke="#000000" stroke-width="1"/>
 <polyline fill="none" points="822,407 756,736" stroke="#000000" stroke-width="1"/>
 <polygon fill="#000000" points="822,407 824,417 819,426 815,415" stroke="#000000" stroke-width="1"/>
 <polygon fill="none" points="822,407 824,417 819,426 815,415" stroke="#000000" stroke-width="1"/>
@@ -337,18 +320,18 @@ Retrogradare utilizator</text>
 <polyline fill="none" points="1014,187 1014,552 756,736" stroke="#000000" stroke-width="1"/>
 <polygon fill="#000000" points="1014,187 1019,197 1014,207 1009,197" stroke="#000000" stroke-width="1"/>
 <polygon fill="none" points="1014,187 1019,197 1014,207 1009,197" stroke="#000000" stroke-width="1"/>
-<polyline fill="none" points="1126,676 1126,688 1041,792" stroke="#000000" stroke-width="1"/>
-<polygon fill="#000000" points="1126,676 1131,686 1126,696 1121,686" stroke="#000000" stroke-width="1"/>
-<polygon fill="none" points="1126,676 1131,686 1126,696 1121,686" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="1126,644 1126,688 1041,792" stroke="#000000" stroke-width="1"/>
+<polygon fill="#000000" points="1126,644 1131,654 1126,664 1121,654" stroke="#000000" stroke-width="1"/>
+<polygon fill="none" points="1126,644 1131,654 1126,664 1121,654" stroke="#000000" stroke-width="1"/>
 <rect fill="#ffc8ff" height="68" stroke="#ffc8ff" stroke-width="1" width="112" x="614" y="288"/>
 <rect fill="none" height="68" stroke="#000000" stroke-width="1" width="112" x="614" y="288"/>
 <text font-family="Dialog" font-size="12" x="619" y="302">
 Aparitia cersetoriei</text>
 <rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="112" x="614" y="312"/>
 <rect fill="#000000" height="1" stroke="#000000" stroke-width="1" width="112" x="614" y="333"/>
-<polyline fill="none" points="654,288 654,192" stroke="#000000" stroke-width="1"/>
-<polygon fill="#ffffff" points="654,192 661,204 647,204" stroke="#ffffff" stroke-width="1"/>
-<polygon fill="none" points="654,192 661,204 647,204" stroke="#000000" stroke-width="1"/>
+<polyline fill="none" points="654,288 654,216" stroke="#000000" stroke-width="1"/>
+<polygon fill="#ffffff" points="654,216 661,228 647,228" stroke="#ffffff" stroke-width="1"/>
+<polygon fill="none" points="654,216 661,228 647,228" stroke="#000000" stroke-width="1"/>
 <rect fill="#ffc8c8" height="68" stroke="#ffc8c8" stroke-width="1" width="79" x="622" y="904"/>
 <rect fill="none" height="68" stroke="#000000" stroke-width="1" width="79" x="622" y="904"/>
 <text font-family="Dialog" font-size="12" x="627" y="918">
