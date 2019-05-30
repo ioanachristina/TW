@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<head>
+    <title>CityZen - Documentație</title>
+
+    <link rel="stylesheet" type="text/css" href="baranav+body.css">
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+	<style>
+
+		h1 {
+			padding-left: 0.5em;
+		}
+
+		h2 {
+			padding-left:2em;
+		}
+
+		p {
+			padding-left:3em;
+		}
+
+		img {
+			float: right;
+			width: 90%;
+		}
+
+		.diagram {
+			float:center;
+			width: 100%;
+		}
+
+		.indentList {
+			padding-left: 8em;
+		}
+
+		.indentListRight {
+			padding-left: 25em;
+		}
+
+		.tab {
+			text-indent: 40px;
+		}
+
+	</style>
+
+</head>
+
+<body>
+    <h1 id="header"></h1>
+
+	<div class="tocAndText">
+
+	<div id="toc_container">
+		<p class="toc_title">Cuprins</p>
+			<ul class="toc_list">
+				<li><a href="#First_Point_Header">1. Documentație</a>
+				<ul>
+					<li><a href="#First_Sub_Point_1">1.1. CityZen - descriere</a></li>
+					<li><a href="#First_Sub_Point_2">1.2. Utilizatori - privilegii</a></li>
+					<li><a href="#First_Sub_Point_3">1.3. Structura aplicației Web</a></li>
+				</ul>
+				</li>
+				<li><a href="#Second_Point_Header">2. Diagrama UML</a></li>
+				<li><a href="#Third_Point_Header">3. Detalii de implementare</a></li>
+				<ul>
+					<li><a href="#Third_Sub_Point_1">3.1. Module funcționale</a></li>
+					<li><a href="#Third_Sub_Point_2">3.2. API</a></li>
+				</ul>
+			</ul>
+	</div>
+
+	<div class="text">
+		<h1 class="tab">Autori:</h1>
+			<ul class="indentList"><font size="+2">
+				<li>Bucur Teodor</li>
+				<li>Pascăl Ioana-Cristina</li></font>
+	</div>
+
+	<div class="text">
+		<h1 class="tab indentList">Repository:</h1>
+			<ul class="indentListRight"><font size="+2">
+				<li><a href="https://github.com/ioanachristina/TW" target="_blank">https://github.com/ioanachristina/TW</a></li></font>
+	</div>
+
+	<font size="+1"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="documentationContainer">
+    <h1 id="First_Point_Header">1. Documentație</h1>
+
+	<h2 id="First_Sub_Point_1">1.1. CityZen - descriere</h2>
+	<p class="tab">Proiectul presupune crearea unei aplicații Web dedicate activităților/evenimentelor petrecute într-un anumit oraș (evenimente precum accidente, vandalizări, indicatoare care lipsesc, dezastre naturale, avertismente importante, zone din oraș în care circulația a fost oprită, zone aflate momentan în construcție etc.)</p>
+
+	<p class="tab">Aplicația va beneficia de o structură de autentificare/logare pentru utilizatori, iar aceștia vor fi capabili să actualizeze baza de date cu noi evenimente, noi detalii despre evenimente etc. Pe lângă utilizatorii obișnuiți, aplicația va stoca și un superuser. Acesta este singurul utilizator care poate "promova" statutul oricărui utilizator de la normal la privilegiat / special (sau invers). Un utilizator special, este, în general, un membru al unei instituții publice din oraș (membru al departamentului de poliție, pompieri, medical, transport public, judecătorie etc.), iar evenimentele etichetate cu un atribut reprezentând instituția la care utilizatorul respectiv aderă în prezent vor putea fi "assigned" de către acesta. Un eveniment marcat drept "assigned" semnifică faptul că un utilizator privilegiat lucrând în domeniul descris de eveniment a luat la cunoștință faptele descrise și a început sau va începe să acționeze în vederea remedierii acestora.</p>
+
+	<h2 id="First_Sub_Point_2">1.2. Utilizatori - privilegii</h2>
+
+	<div class="slideshow-container">
+		<div class="mySlides fade">
+			<div class="numbertext">1 / 3</div>
+			<img src="1.jpg">
+			<div class="imageText">Caption Text</div>
+		</div>
+
+		<div class="mySlides fade">
+			<div class="numbertext">2 / 3</div>
+			<img src="2.jpg">
+			<div class="imageText">Caption Two</div>
+		</div>
+
+		<div class="mySlides fade">
+			<div class="numbertext">3 / 3</div>
+			<img src="3.jpg">
+			<div class="imageText">Caption Three</div>
+		</div>
+
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+
+	<p class="tab">Utilizatorii nelogați vor beneficia de următoarele privilegii:
+		<ul class="indentList">
+			<li>vizualizare evenimente postate;</li>
+			<li>vizualizare detalii și comentarii pentru evenimentele postate;</li>
+			<li>filtrare și sortare a evenimentelor cu scopul de a ușura găsirea noutăților dorite;</li>
+			<li>vizualizare profil al utilizatorilor;</li>
+		</ul></p>
+	
+	<p class="tab">Utilizatorii logați beneficiază de toate privilegiile utilizatorilor nelogați, la care se mai adaugă:
+		<ul class="indentList">
+			<li>adăugare de evenimente;</li>
+			<li>adăugare de comentarii la evenimentele postate;</li>
+			<li>posibilitate de raportare către un administrator a evenimentelor / utilizatorilor;</li>
+			<li>asignare eveniment (doar pentru utilizatorii privilegiați);</li>
+		</ul></p>
+	
+	<p class="tab">Superuserii beneficiază de toate privilegiile postate mai sus, la care se adaugă:
+		<ul class="indentList">
+			<li>promovare / retrogradare a statutului unui utilizator de la normal la privilegiat sau invers;</li>
+		</ul></p>
+	
+	<p class="tab">Administratorii beneficiază de toate privilegiile. Acestea includ toate cele de mai sus, incluzând de asemenea și:
+		<ul class="indentList">
+			<li>ștergere evenimente false / care încalcă termenii și condițiile de utilizare a aplicației Web;</li>
+			<li>ștergere conturi inactive / false / care încalcă termenii și condițiile de utilizare a aplicației Web;</li>
+			<li>ștergere sau ascundere de comentarii;</li>
+		</ul></p>
+
+	<h2 id="First_Sub_Point_3">1.3. Structura aplicației Web</h2>
+	<p class="tab">Vor fi implementate minim 4 pagini Web:
+		<ul class="indentList">
+			<li>pagina principală, ce va oferi utilizatorului redirecționări către celelalte pagini Web ale aplicației;</li>
+			<li>o pagină care afișează evenimentele petrecute în oraș. Utilizatorul va putea filtra tipul de conținut afișat de aplicația Web: zona din care îi sunt afișate evenimentele, data la care s-au petrecut etc. Utilizatorii privilegiați au opțiunea de a marca un eveniment drept "assigned" sau "unassigned". De asemenea, aplicația va implementa un sistem de notificări de tip pop-up pe care utilizatorul va putea decide dacă dorește să le primească sau nu, precum și tipul de notificări dorite. (de asemenea, o funcție de căutare de evenimente poate fi implementată);</li>
+			<li>o pagină accesibilă doar de către superuser, în care acesta are o vedere de asamblu asupra tuturor utilizatorilor stocați în baza de date și poate acționa asupra acestora în felul următor: un utilizator obișnuit poate fi "promovat" la statutul de utilizator privilegiat, iar un utilizator privilegiat poate fi "retrogradat" la statutul de utilizator obișnuit;</li>
+			<li>o pagină de logare / autentificare. (OPȚIONAL: În cadrul autentificării se poate implementa un token special proiectat pentru membrii diverselor instituții publice ale orașului, acesta fiind constituit din diverse câmpuri care dovedesc apartenența utilizatorului respectiv la acea instituție. În cazul aprobării tokenului, superuser-ul nu mai este nevoit să modifice manual statutul noului utilizator, acesta fiind automat stocat în baza de date drept utilizator privilegiat, la finalul procesului de autentificare).</li>
+		</ul></p><br><br>
+
+
+	<h1 id="Second_Point_Header">2. Diagrama UML</h1>
+		<img class="diagram" src="ClassDiagram.svg">
+
+	<h1 id="Third_Point_Header">3. Detalii de implementare</h1>
+
+	<h2 id="Third_Sub_Point_1">3.1. Module funcționale (poți să adaugi la fiecare element din listă un hyperlink către fișierul .php corespunzător?)</h2>
+		<ul class="indentList">
+			<li>Login / Sign Up / Recuperare parolă</li>
+			<li>Vizualizare / editare profil</li>
+			<li>Adăugare / editare / ștergere anunț</li>
+			<li>Filtrare anunțuri</li>
+			<li>Administrare utilizatori</li>
+			<li>Modul de notificări</li>
+		</ul>
+
+	<h2 id="Third_Sub_Point_2">3.2. API</h2>
+		<ul class="indentList">
+			<li>???</li>
+		</ul>
+</div>
+
+<br><br>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
