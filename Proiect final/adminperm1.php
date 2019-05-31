@@ -9,7 +9,7 @@ include('server.php');
 <link rel="stylesheet" type="text/css" href="nav.css">
 <link rel="stylesheet" type="text/css" href="header1.css">
 <link rel="stylesheet" type="text/css" href="index.css">
-<link rel="stylesheet" type="text/css" href="admpermm.css">
+<link rel="stylesheet" type="text/css" href="adm.css">
 
 </head>
 <body>
@@ -106,6 +106,7 @@ $user = $_SESSION['username'];
 		echo "<option value = 'Admin' > Admin </option>";
 		echo "</select></span></div>";
 		echo "<button type='submit' class='but' name='aplica'> Apply </button>";
+		echo "<button type='submit' class='but' name='sterge'> Sterge cont </button>";
 		echo "<input type='hidden' name='idhidd' value='$id' />";
 		echo "</form>";
 	}
@@ -131,6 +132,13 @@ $user = $_SESSION['username'];
 			$page = $_SERVER['PHP_SELF'];
 			echo '<meta http-equiv="Refresh" content="0;' . $page . '">';
 
+	}
+	if(isset($_POST['sterge'])){
+		$user_id = mysqli_real_escape_string($db,$_POST['idhidd']);
+		$query = "Delete from users where user_id=$user_id";
+		mysqli_query($db,$query);
+		$page = $_SERVER['PHP_SELF'];
+		echo '<meta http-equiv="Refresh" content="0;' . $page . '">';
 	}
 ?>
 </body>
