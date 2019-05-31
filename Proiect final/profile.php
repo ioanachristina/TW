@@ -123,7 +123,7 @@ $user = $_SESSION['username'];
 		echo "</p>";
 		if($row['role_name']=="Admin") {
 			echo "<a href='adminperm.php'><input type='button' class='adminp' onclick='window.location.href="."'adminperm.php'"."'"." value='Anunturi adaugate'/></a>";
-			echo "<a href='adminperm1.php'><input type='button' class='adminp' onclick='window.location.href="."'adminperm1.php'"."'"." value='Schimba roluri useri'/></a>";
+			echo "<a href='adminperm1.php'><input type='button' class='adminp' onclick='window.location.href="."'adminperm1.php'"."'"." value='Administrare utilizatori'/></a>";
 
 		}
 		if($row['role_name']=="SuperUser") {
