@@ -1,5 +1,5 @@
-	<?php 
-		include("server.php");
+<?php 
+	include("server.php");
 
 	if(isset($_POST['trimite'])){
 		$email = mysqli_real_escape_string($db, $_POST['email']);
@@ -16,10 +16,10 @@ $message = "Please use this password to login " . $password;
 $headers = "From : office@cityzen.ro";
 	if(mail($to, $subject, $message, $headers)){
 		$message = "Verificati mail-ul!";
-			echo "<script type='text/javascript'>alert('$message');</script>";
+		echo "<script type='text/javascript'>alert('$message');</script>";
 	}else{
-	$message = "Email-ul nu este corect!";
-			echo "<script type='text/javascript'>alert('$message');</script>";
+		$message = "Email-ul nu este corect!";
+		echo "<script type='text/javascript'>alert('$message');</script>";
 	}
 }
 	?>

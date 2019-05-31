@@ -39,7 +39,7 @@
                 <font face="Roboto" size="4" onclick="showFiltering()">
                     <img src="filter-icon.svg" alt="Filter icon" width="20" height="20"> FILTREAZĂ</font></span></h2>
 
- <form id="filter-panel" method = "POST">
+ <form id="filter-panel" method = "GET">
     <div class="FilterBox">
 			<p><span style="float:center">Rating:
          <select name="rating">
@@ -101,10 +101,10 @@ else {
 
 <?php
  $where = "";
-  if(isset($_POST['filter'])){
-		$rating = mysqli_real_escape_string($db,$_POST['rating']);
-		$loc = mysqli_real_escape_string($db,$_POST['localitate']);
-		$data = mysqli_real_escape_string($db,$_POST['data']);
+  if(isset($_GET['filter'])){
+		$rating = mysqli_real_escape_string($db,$_GET['rating']);
+		$loc = mysqli_real_escape_string($db,$_GET['localitate']);
+		$data = mysqli_real_escape_string($db,$_GET['data']);
 		if($rating != "" && $loc != ""  && $data != ""){
 			$sqlget = "select * from addtable 
 					where localitate = '$loc' order by likes $rating , data_adaugare $data ";
