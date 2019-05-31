@@ -1,0 +1,44 @@
+body {
+  max-width: 21cm;
+  margin: auto;
+  line-height: 1.6;
+  font-weight: 300;
+  font-family: "Ubuntu", Times, serif;
+}
+
+header > h1 {
+  margin: 0;
+  font-size: 3em;
+  padding-top: 2em;
+}
+
+h1, h2 {
+  color: #40095a;
+  letter-spacing: 0.0375em;
+}
+h2 {
+  margin-top: 3em;
+}
+
+[role="content"] a {
+  text-decoration: none;
+}
+
+[role="content"] dt {
+  font-weight: bold;
+}
+
+[role="content"] dd {
+  margin-bottom: 1em;
+}
+
+a.onto {
+  font-family: "Georgia", monospace;
+  text-decoration: none;
+  background: linear-gradient(to top, rgba(255, 0, 0, 0.4), rgba(255, 0, 0, 0.4) 15%, #fff 16%);
+  color: #434343;
+}
+
+figcaption {
+	text-align: center;
+}
