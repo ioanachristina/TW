@@ -95,7 +95,7 @@
 	<h2 id="First_Sub_Point_1">1.1. CityZen - descriere</h2>
 	<p class="tab">Proiectul presupune crearea unei aplicații Web dedicate activităților/evenimentelor petrecute într-un anumit oraș (evenimente precum accidente, vandalizări, indicatoare care lipsesc, dezastre naturale, avertismente importante, zone din oraș în care circulația a fost oprită, zone aflate momentan în construcție etc.)</p>
 
-	<p class="tab">Aplicația va beneficia de o structură de autentificare/logare pentru utilizatori, iar aceștia vor fi capabili să actualizeze baza de date cu noi evenimente, noi detalii despre evenimente etc. Pe lângă utilizatorii obișnuiți, aplicația va stoca și un superuser. Acesta este singurul utilizator care poate "promova" statutul oricărui utilizator de la normal la privilegiat / special (sau invers). Un utilizator special, este, în general, un membru al unei instituții publice din oraș (membru al departamentului de poliție, pompieri, medical, transport public, judecătorie etc.), iar evenimentele etichetate cu un atribut reprezentând instituția la care utilizatorul respectiv aderă în prezent vor putea fi "assigned" de către acesta. Un eveniment marcat drept "assigned" semnifică faptul că un utilizator privilegiat lucrând în domeniul descris de eveniment a luat la cunoștință faptele descrise și a început sau va începe să acționeze în vederea remedierii acestora.</p>
+	<p class="tab">Aplicația va beneficia de o structură de autentificare/logare pentru utilizatori, iar aceștia vor fi capabili să actualizeze baza de date cu noi evenimente, noi detalii despre evenimente etc. Pe lângă utilizatorii obișnuiți, aplicația va stoca și un Admin. Acesta este singurul utilizator care poate "promova" statutul oricărui utilizator de la user simplu la SuperUser/Admin. Inainte ca evenimentele sa fie postate pe pagina principala sau pe categoriile specifice, acestea sunt verificate de un Admin sau un SuperUser care decide daca le accepta sau le sterge definitiv. Fiecare anunt poate primi rating ( like ) doar de la utilizatorii logati, cei nelogati ,putand insa doar vizualiza ratingul fiecarui anunt.</p>
 
 	<h2 id="First_Sub_Point_2">1.2. Utilizatori - privilegii</h2>
 
@@ -180,6 +180,7 @@
 	<p class="tab">Administratorii beneficiază de toate privilegiile. Acestea includ toate cele de mai sus, incluzând de asemenea și:
 		<ul class="indentList">
 			<li>promovarea / retrogradarea unui utilizator;</li>
+			<li>stergerea unui utilizator; </li>
 		</ul></p>
 
 	<h2 id="First_Sub_Point_3">1.3. Structura aplicației Web</h2>
